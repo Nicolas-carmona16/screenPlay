@@ -1,5 +1,6 @@
 package co.com.udea.certificacion.busquedavuelosa.stepdefinitions;
 
+import co.com.udea.certificacion.busquedavuelosa.questions.ElCalendario;
 import co.com.udea.certificacion.busquedavuelosa.questions.ElDesplegable;
 import co.com.udea.certificacion.busquedavuelosa.tasks.AbrirPagina;
 import co.com.udea.certificacion.busquedavuelosa.tasks.SeleccionarCampo;
@@ -44,6 +45,10 @@ public class BusquedaVuelosStepDefinitions {
             usuario.attemptsTo(SeleccionarCampo.enLaPagina("origen"));
         } else if (campo.equalsIgnoreCase("destino")) {
             usuario.attemptsTo(SeleccionarCampo.enLaPagina("destino"));
+        } else if (campo.equalsIgnoreCase("ida")) {
+            usuario.attemptsTo(SeleccionarCampo.enLaPagina("ida"));
+        } else if (campo.equalsIgnoreCase("vuelta")) {
+            usuario.attemptsTo(SeleccionarCampo.enLaPagina("vuelta"));
         }
     }
 
@@ -56,6 +61,19 @@ public class BusquedaVuelosStepDefinitions {
         } else if (campo.equalsIgnoreCase("destino")) {
             usuario.should(
                     seeThat(ElDesplegable.estaVisible("destino"), is(true))
+            );
+        }
+    }
+
+    @Then("se muestra el calendario para {string}")
+    public void seMuestraElCalendarioPara(String campo) {
+        if (campo.equalsIgnoreCase("ida")) {
+            usuario.should(
+                    seeThat(ElCalendario.estaVisible("ida"), is(true))
+            );
+        } else if (campo.equalsIgnoreCase("vuelta")) {
+            usuario.should(
+                    seeThat(ElCalendario.estaVisible("vuelta"), is(true))
             );
         }
     }

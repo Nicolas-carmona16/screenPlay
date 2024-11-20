@@ -27,14 +27,14 @@ public class BusquedaVuelosPage extends PageObject {
             .located(By.xpath("/html/body/div[1]/div[2]/form/div[2]/div[3]/div[1]/button"));
 
     public static final Target CALENDARIO_FECHA_IDA = the("calendario para la fecha de ida")
-            .located(By.xpath("//*[@id=\"radix-:r81:\"]"));
+            .located(By.xpath("/html/body/div[3]/div/div"));
 
     // FECHA VUELTA
     public static final Target INPUT_FECHA_VUELTA = the("campo para fecha vuelta")
             .located(By.xpath("/html/body/div[1]/div[2]/form/div[2]/div[3]/div[2]/button"));
 
     public static final Target CALENDARIO_FECHA_VUELTA = the("calendario para la fecha de vuelta")
-            .located(By.xpath("//*[@id=\"radix-:r81:\"]"));
+            .located(By.xpath("/html/body/div[3]/div/div"));
 
     // BOTON BUSCA
     public static final Target BOTON_BUSCAR = the("botón para buscar vuelos")
