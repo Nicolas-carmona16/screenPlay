@@ -25,7 +25,7 @@ public class SeleccionarCampo implements Task {
         } else if (campo.equalsIgnoreCase("ida")) {
             actor.attemptsTo(Click.on(INPUT_FECHA_IDA));
         } else if (campo.equalsIgnoreCase("vuelta")) {
-            actor.attemptsTo(DoubleClick.on(INPUT_FECHA_VUELTA));
+            actor.attemptsTo(Click.on(INPUT_FECHA_VUELTA));
         }
     }
 
