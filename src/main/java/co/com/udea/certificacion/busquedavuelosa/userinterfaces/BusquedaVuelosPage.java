@@ -13,14 +13,14 @@ public class BusquedaVuelosPage extends PageObject {
             .located(By.xpath("/html/body/div[1]/div[2]/form/div[2]/div[1]/div[1]/button"));
 
     public static final Target DESPLEGABLE_CIUDADES_ORIGEN = the("desplegable de ciudades para el origen")
-            .located(By.xpath("//*[@id=\"radix-:r7t:\"]"));
+            .located(By.xpath("/html/body/div[3]/div/div/div[2]/div/div"));
 
     // DESTINO
     public static final Target INPUT_DESTINO = the("campo para destino")
             .located(By.xpath("/html/body/div[1]/div[2]/form/div[2]/div[1]/div[2]/button"));
 
     public static final Target DESPLEGABLE_CIUDADES_DESTINO = the("desplegable de ciudades para el destino")
-            .located(By.xpath("//*[@id=\"radix-:r7v:\"]"));
+            .located(By.xpath("/html/body/div[3]/div/div/div[2]/div/div"));
 
     // FECHA IDA
     public static final Target INPUT_FECHA_IDA = the("campo para fecha ida")
