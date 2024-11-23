@@ -12,12 +12,18 @@ public class BusquedaVuelosPage extends PageObject {
     public static final Target INPUT_ORIGEN = the("campo para origen")
             .located(By.xpath("/html/body/div[1]/div[2]/form/div[2]/div[1]/div[1]/button"));
 
+    public static final Target CAMPO_BUSQUEDA_ORIGEN = Target.the("campo de búsqueda en el desplegable de origen")
+            .locatedBy("//input[@placeholder='Busca lugar...']");
+
     public static final Target DESPLEGABLE_CIUDADES_ORIGEN = the("desplegable de ciudades para el origen")
             .located(By.xpath("/html/body/div[3]/div/div/div[2]/div/div"));
 
     // DESTINO
     public static final Target INPUT_DESTINO = the("campo para destino")
             .located(By.xpath("/html/body/div[1]/div[2]/form/div[2]/div[1]/div[2]/button"));
+
+    public static final Target CAMPO_BUSQUEDA_DESTINO = Target.the("campo de búsqueda en el desplegable de destino")
+            .locatedBy("//input[@placeholder='Busca lugar...']");
 
     public static final Target DESPLEGABLE_CIUDADES_DESTINO = the("desplegable de ciudades para el destino")
             .located(By.xpath("/html/body/div[3]/div/div/div[2]/div/div"));
@@ -47,4 +53,12 @@ public class BusquedaVuelosPage extends PageObject {
     // VUELO ENCONTRADO
     public static final Target VUELO_DISPONIBLE = the("div con la información básica del vuelo encontrado")
             .located(By.xpath("/html/body/div[1]/div[2]/div/ul/li"));
+
+
+    // PROVICIONALES
+    public static final Target CALENDARIO_FECHA_IDA_2 = the("calendario para la fecha de ida")
+            .locatedBy("/html/body/div[3]/div/div/div/div/table/tbody/tr[5]/td[3]/button");
+
+    public static final Target CALENDARIO_FECHA_VUELTA_2 = the("calendario para la fecha de vuelta")
+            .locatedBy("/html/body/div[3]/div/div/div/div/table/tbody/tr[5]/td[7]/button");
 }

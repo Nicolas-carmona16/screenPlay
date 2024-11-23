@@ -1,9 +1,13 @@
 package co.com.udea.certificacion.busquedavuelosa.stepdefinitions;
 
+import co.com.udea.certificacion.busquedavuelosa.models.BusquedaDeVuelos;
 import co.com.udea.certificacion.busquedavuelosa.questions.ElCalendario;
 import co.com.udea.certificacion.busquedavuelosa.questions.ElDesplegable;
+import co.com.udea.certificacion.busquedavuelosa.questions.VuelosDisponibles;
 import co.com.udea.certificacion.busquedavuelosa.tasks.AbrirPagina;
+import co.com.udea.certificacion.busquedavuelosa.tasks.BuscarVuelos;
 import co.com.udea.certificacion.busquedavuelosa.tasks.SeleccionarCampo;
+import co.com.udea.certificacion.busquedavuelosa.tasks.SeleccionarCampos;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -76,5 +80,27 @@ public class BusquedaVuelosStepDefinitions {
                     seeThat(ElCalendario.estaVisible("vuelta"), is(true))
             );
         }
+    }
+
+    @Given("selecciono origen {string} destino {string} fecha ida {string} y fecha vuelta {string}")
+    public void seleccionoOrigenDestinoFechaIdaYFechaVuelta(String origen, String destino, String fechaIda, String fechaVuelta) {
+        BusquedaDeVuelos busquedaDeVuelos = new BusquedaDeVuelos(origen, destino, fechaIda, fechaVuelta);
+        usuario.attemptsTo(
+                SeleccionarCampos.conDatos(
+                        busquedaDeVuelos
+                )
+        );
+    }
+
+    @When("doy click en el boton buscar")
+    public void doyClickEnElBotonBuscar() {
+        usuario.attemptsTo(BuscarVuelos.ahora());
+    }
+
+    @Then("se obtienen los vuelos disponibles")
+    public void seObtienenLosVuelosDisponibles() {
+        usuario.should(
+                seeThat(VuelosDisponibles.sonVisibles(), is(true))
+        );
     }
 }
