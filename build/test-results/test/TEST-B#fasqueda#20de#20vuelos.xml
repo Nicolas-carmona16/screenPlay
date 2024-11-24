@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Búsqueda de vuelos" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-11-24T23:06:49" hostname="LAPTOP-NDELRLE7" time="8.782">
+<testsuite name="Búsqueda de vuelos" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-11-24T23:12:59" hostname="LAPTOP-NDELRLE7" time="9.236">
   <properties/>
-  <testcase name="Selección del origen" classname="Búsqueda de vuelos" time="3.565"/>
-  <testcase name="Selección de destino" classname="Búsqueda de vuelos" time="0.789"/>
-  <testcase name="Selección de la fecha ida de vuelo" classname="Búsqueda de vuelos" time="0.657"/>
-  <testcase name="Selección de la fecha vuelta de vuelo" classname="Búsqueda de vuelos" time="0.676"/>
-  <testcase name="Búsqueda de vuelos disponibles" classname="Búsqueda de vuelos" time="3.094"/>
+  <testcase name="Selección del origen" classname="Búsqueda de vuelos" time="3.743"/>
+  <testcase name="Selección de destino" classname="Búsqueda de vuelos" time="0.841"/>
+  <testcase name="Selección de la fecha ida de vuelo" classname="Búsqueda de vuelos" time="0.72"/>
+  <testcase name="Selección de la fecha vuelta de vuelo" classname="Búsqueda de vuelos" time="0.719"/>
+  <testcase name="Búsqueda de vuelos disponibles" classname="Búsqueda de vuelos" time="3.212"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[[Test worker] INFO  - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
@@ -17,9 +17,9 @@ Selección del origen(búsqueda-de-vuelos;selección-del-origen)
 --------------------------------------------------------------------------------
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \r\n                   --di..., --disable-default-apps, --disable-extensions-file-a..., \r\n                   --in..., --disable-infobars,--disabl..., --remote-allow-origins=*], extensions: []}}
-nov. 24, 2024 6:06:51 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+nov. 24, 2024 6:13:02 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 131
-nov. 24, 2024 6:06:51 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+nov. 24, 2024 6:13:02 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 131.0.6778.86. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO  - ?[92m
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  

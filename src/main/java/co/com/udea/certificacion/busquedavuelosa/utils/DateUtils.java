@@ -19,4 +19,8 @@ public class DateUtils {
             default: throw new IllegalArgumentException("Mes no válido: " + mes);
         }
     }
+
+    public static String normalizarNumero(String numero) {
+        return numero.startsWith("0") ? numero.substring(1) : numero;
+    }
 }

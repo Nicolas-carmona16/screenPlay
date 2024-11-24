@@ -22,6 +22,6 @@ Feature: Búsqueda de vuelos
 
   Scenario: Búsqueda de vuelos disponibles
     Given que estoy en la pagina de busqueda de vuelos
-    And selecciono origen "Barranquilla" destino "Bogota" fecha ida "2025-01-1" y fecha vuelta "2025-01-10"
+    And selecciono origen "Barranquilla" destino "Bogota" fecha ida "2025-01-01" y fecha vuelta "2025-01-10"
     When doy click en el boton buscar
     Then se obtienen los vuelos disponibles

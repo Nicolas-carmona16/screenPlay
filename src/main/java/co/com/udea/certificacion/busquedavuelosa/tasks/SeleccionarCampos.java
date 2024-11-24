@@ -59,6 +59,7 @@ public class SeleccionarCampos implements Task {
         String dia = partesFecha[2];
 
         String mesEnIngles = DateUtils.obtenerNombreMes(mes);
+        String diaNormalizado = DateUtils.normalizarNumero(dia);
 
         boolean mesCorrecto = false;
 
@@ -74,7 +75,7 @@ public class SeleccionarCampos implements Task {
         }
 
         actor.attemptsTo(
-                Click.on(DIA_EN_CALENDARIO(dia))
+                Click.on(DIA_EN_CALENDARIO(diaNormalizado))
         );
     }
 
