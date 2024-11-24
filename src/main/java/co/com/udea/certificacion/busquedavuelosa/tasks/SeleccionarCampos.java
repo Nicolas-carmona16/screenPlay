@@ -1,6 +1,7 @@
 package co.com.udea.certificacion.busquedavuelosa.tasks;
 
 import co.com.udea.certificacion.busquedavuelosa.models.BusquedaDeVuelos;
+import co.com.udea.certificacion.busquedavuelosa.utils.DateUtils;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
@@ -57,7 +58,7 @@ public class SeleccionarCampos implements Task {
         String mes = partesFecha[1];
         String dia = partesFecha[2];
 
-        String mesEnIngles = obtenerNombreMes(mes);
+        String mesEnIngles = DateUtils.obtenerNombreMes(mes);
 
         boolean mesCorrecto = false;
 
@@ -75,24 +76,6 @@ public class SeleccionarCampos implements Task {
         actor.attemptsTo(
                 Click.on(DIA_EN_CALENDARIO(dia))
         );
-    }
-
-     private String obtenerNombreMes(String mes) {
-        switch (mes) {
-            case "01": return "January";
-            case "02": return "February";
-            case "03": return "March";
-            case "04": return "April";
-            case "05": return "May";
-            case "06": return "June";
-            case "07": return "July";
-            case "08": return "August";
-            case "09": return "September";
-            case "10": return "October";
-            case "11": return "November";
-            case "12": return "December";
-            default: throw new IllegalArgumentException("Mes no válido: " + mes);
-        }
     }
 
 
