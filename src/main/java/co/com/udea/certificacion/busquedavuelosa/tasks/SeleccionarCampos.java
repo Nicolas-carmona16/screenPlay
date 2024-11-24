@@ -2,6 +2,7 @@ package co.com.udea.certificacion.busquedavuelosa.tasks;
 
 import co.com.udea.certificacion.busquedavuelosa.models.BusquedaDeVuelos;
 import co.com.udea.certificacion.busquedavuelosa.utils.DateUtils;
+import net.serenitybdd.core.pages.ListOfWebElementFacades;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
@@ -73,12 +74,26 @@ public class SeleccionarCampos implements Task {
                 );
             }
         }
-
+        ListOfWebElementFacades diasVisibles = DIA_EN_CALENDARIO(diaNormalizado).resolveAllFor(actor);
+        if (diasVisibles.size() == 1) {
+            actor.attemptsTo(
+                    Click.on(diasVisibles.get(0))
+            );
+        } else if (diasVisibles.size() > 1) {
+            if (Integer.parseInt(diaNormalizado) < 15) {
+                actor.attemptsTo(
+                        Click.on(diasVisibles.get(0))
+                );
+            } else {
+                actor.attemptsTo(
+                        Click.on(diasVisibles.get(1))
+                );
+            }
+        }
         actor.attemptsTo(
                 Click.on(DIA_EN_CALENDARIO(diaNormalizado))
         );
     }
-
 
     public static SeleccionarCampos conDatos(BusquedaDeVuelos busquedaDeVuelos) {
         return instrumented(SeleccionarCampos.class, busquedaDeVuelos);
