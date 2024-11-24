@@ -32,15 +32,20 @@ public class BusquedaVuelosPage extends PageObject {
     public static final Target INPUT_FECHA_IDA = the("campo para fecha ida")
             .located(By.xpath("/html/body/div[1]/div[2]/form/div[2]/div[3]/div[1]/button"));
 
-    public static final Target CALENDARIO_FECHA_IDA = the("calendario para la fecha de ida")
-            .located(By.xpath("/html/body/div[3]/div/div"));
-
     // FECHA VUELTA
     public static final Target INPUT_FECHA_VUELTA = the("campo para fecha vuelta")
             .located(By.xpath("/html/body/div[1]/div[2]/form/div[2]/div[3]/div[2]/button"));
 
-    public static final Target CALENDARIO_FECHA_VUELTA = the("calendario para la fecha de vuelta")
-            .located(By.xpath("/html/body/div[3]/div/div"));
+    public static final Target CONTENEDOR_CALENDARIO = the("contenedor del calendario")
+            .locatedBy("/html/body/div[3]/div/div");
+
+    public static final Target BOTON_SIGUIENTE_MES = the("botón siguiente mes")
+            .locatedBy("/html/body/div[3]/div/div/div/div/div/div[2]/button[2]");
+
+    public static final Target DIA_EN_CALENDARIO(String dia) {
+        return the("día en el calendario")
+                .locatedBy("//button[text()='" + dia + "']");
+    }
 
     // BOTON BUSCA
     public static final Target BOTON_BUSCAR = the("botón para buscar vuelos")
@@ -53,12 +58,4 @@ public class BusquedaVuelosPage extends PageObject {
     // VUELO ENCONTRADO
     public static final Target VUELO_DISPONIBLE = the("div con la información básica del vuelo encontrado")
             .located(By.xpath("/html/body/div[1]/div[2]/div/ul/li"));
-
-
-    // PROVICIONALES
-    public static final Target CALENDARIO_FECHA_IDA_2 = the("calendario para la fecha de ida")
-            .locatedBy("/html/body/div[3]/div/div/div/div/table/tbody/tr[5]/td[3]/button");
-
-    public static final Target CALENDARIO_FECHA_VUELTA_2 = the("calendario para la fecha de vuelta")
-            .locatedBy("/html/body/div[3]/div/div/div/div/table/tbody/tr[5]/td[7]/button");
 }

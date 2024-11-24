@@ -1,0 +1,2110 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html lang="en" style=""&gt;<br/>
+ &lt;head&gt;<br/>
+  &lt;meta charset="utf-8"&gt;<br/>
+  &lt;meta name="viewport" content="width=device-width"&gt;<br/>
+  &lt;meta name="next-head-count" content="2"&gt;<br/>
+  &lt;noscript data-n-css=""&gt;&lt;/noscript&gt;<br/>
+  &lt;script defer nomodule="" src="/_next/static/chunks/polyfills.js"&gt;&lt;/script&gt;<br/>
+  &lt;script src="/_next/static/chunks/webpack.js" defer&gt;&lt;/script&gt;<br/>
+  &lt;script src="/_next/static/chunks/main.js" defer&gt;&lt;/script&gt;<br/>
+  &lt;script src="/_next/static/chunks/pages/_app.js" defer&gt;&lt;/script&gt;<br/>
+  &lt;script src="/_next/static/chunks/pages/BusquedaDeVuelosA.js" defer&gt;&lt;/script&gt;<br/>
+  &lt;script src="/_next/static/development/_buildManifest.js" defer&gt;&lt;/script&gt;<br/>
+  &lt;script src="/_next/static/development/_ssgManifest.js" defer&gt;&lt;/script&gt;<br/>
+  &lt;style&gt;/*<br/>
+! tailwindcss v3.4.10 | MIT License | https://tailwindcss.com<br/>
+*//*<br/>
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)<br/>
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)<br/>
+*/<br/>
+<br/>
+*,<br/>
+::before,<br/>
+::after {<br/>
+  box-sizing: border-box; /* 1 */<br/>
+  border-width: 0; /* 2 */<br/>
+  border-style: solid; /* 2 */<br/>
+  border-color: #e5e7eb; /* 2 */<br/>
+}<br/>
+<br/>
+::before,<br/>
+::after {<br/>
+  --tw-content: '';<br/>
+}<br/>
+<br/>
+/*<br/>
+1. Use a consistent sensible line-height in all browsers.<br/>
+2. Prevent adjustments of font size after orientation changes in iOS.<br/>
+3. Use a more readable tab size.<br/>
+4. Use the user's configured `sans` font-family by default.<br/>
+5. Use the user's configured `sans` font-feature-settings by default.<br/>
+6. Use the user's configured `sans` font-variation-settings by default.<br/>
+7. Disable tap highlights on iOS<br/>
+*/<br/>
+<br/>
+html,<br/>
+:host {<br/>
+  line-height: 1.5; /* 1 */<br/>
+  -webkit-text-size-adjust: 100%; /* 2 */<br/>
+  -moz-tab-size: 4; /* 3 */<br/>
+  tab-size: 4; /* 3 */<br/>
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */<br/>
+  font-feature-settings: normal; /* 5 */<br/>
+  font-variation-settings: normal; /* 6 */<br/>
+  -webkit-tap-highlight-color: transparent; /* 7 */<br/>
+}<br/>
+<br/>
+/*<br/>
+1. Remove the margin in all browsers.<br/>
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.<br/>
+*/<br/>
+<br/>
+body {<br/>
+  margin: 0; /* 1 */<br/>
+  line-height: inherit; /* 2 */<br/>
+}<br/>
+<br/>
+/*<br/>
+1. Add the correct height in Firefox.<br/>
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)<br/>
+3. Ensure horizontal rules are visible by default.<br/>
+*/<br/>
+<br/>
+hr {<br/>
+  height: 0; /* 1 */<br/>
+  color: inherit; /* 2 */<br/>
+  border-top-width: 1px; /* 3 */<br/>
+}<br/>
+<br/>
+/*<br/>
+Add the correct text decoration in Chrome, Edge, and Safari.<br/>
+*/<br/>
+<br/>
+abbr:where([title]) {<br/>
+  text-decoration: underline dotted;<br/>
+}<br/>
+<br/>
+/*<br/>
+Remove the default font size and weight for headings.<br/>
+*/<br/>
+<br/>
+h1,<br/>
+h2,<br/>
+h3,<br/>
+h4,<br/>
+h5,<br/>
+h6 {<br/>
+  font-size: inherit;<br/>
+  font-weight: inherit;<br/>
+}<br/>
+<br/>
+/*<br/>
+Reset links to optimize for opt-in styling instead of opt-out.<br/>
+*/<br/>
+<br/>
+a {<br/>
+  color: inherit;<br/>
+  text-decoration: inherit;<br/>
+}<br/>
+<br/>
+/*<br/>
+Add the correct font weight in Edge and Safari.<br/>
+*/<br/>
+<br/>
+b,<br/>
+strong {<br/>
+  font-weight: bolder;<br/>
+}<br/>
+<br/>
+/*<br/>
+1. Use the user's configured `mono` font-family by default.<br/>
+2. Use the user's configured `mono` font-feature-settings by default.<br/>
+3. Use the user's configured `mono` font-variation-settings by default.<br/>
+4. Correct the odd `em` font sizing in all browsers.<br/>
+*/<br/>
+<br/>
+code,<br/>
+kbd,<br/>
+samp,<br/>
+pre {<br/>
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */<br/>
+  font-feature-settings: normal; /* 2 */<br/>
+  font-variation-settings: normal; /* 3 */<br/>
+  font-size: 1em; /* 4 */<br/>
+}<br/>
+<br/>
+/*<br/>
+Add the correct font size in all browsers.<br/>
+*/<br/>
+<br/>
+small {<br/>
+  font-size: 80%;<br/>
+}<br/>
+<br/>
+/*<br/>
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.<br/>
+*/<br/>
+<br/>
+sub,<br/>
+sup {<br/>
+  font-size: 75%;<br/>
+  line-height: 0;<br/>
+  position: relative;<br/>
+  vertical-align: baseline;<br/>
+}<br/>
+<br/>
+sub {<br/>
+  bottom: -0.25em;<br/>
+}<br/>
+<br/>
+sup {<br/>
+  top: -0.5em;<br/>
+}<br/>
+<br/>
+/*<br/>
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)<br/>
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)<br/>
+3. Remove gaps between table borders by default.<br/>
+*/<br/>
+<br/>
+table {<br/>
+  text-indent: 0; /* 1 */<br/>
+  border-color: inherit; /* 2 */<br/>
+  border-collapse: collapse; /* 3 */<br/>
+}<br/>
+<br/>
+/*<br/>
+1. Change the font styles in all browsers.<br/>
+2. Remove the margin in Firefox and Safari.<br/>
+3. Remove default padding in all browsers.<br/>
+*/<br/>
+<br/>
+button,<br/>
+input,<br/>
+optgroup,<br/>
+select,<br/>
+textarea {<br/>
+  font-family: inherit; /* 1 */<br/>
+  font-feature-settings: inherit; /* 1 */<br/>
+  font-variation-settings: inherit; /* 1 */<br/>
+  font-size: 100%; /* 1 */<br/>
+  font-weight: inherit; /* 1 */<br/>
+  line-height: inherit; /* 1 */<br/>
+  letter-spacing: inherit; /* 1 */<br/>
+  color: inherit; /* 1 */<br/>
+  margin: 0; /* 2 */<br/>
+  padding: 0; /* 3 */<br/>
+}<br/>
+<br/>
+/*<br/>
+Remove the inheritance of text transform in Edge and Firefox.<br/>
+*/<br/>
+<br/>
+button,<br/>
+select {<br/>
+  text-transform: none;<br/>
+}<br/>
+<br/>
+/*<br/>
+1. Correct the inability to style clickable types in iOS and Safari.<br/>
+2. Remove default button styles.<br/>
+*/<br/>
+<br/>
+button,<br/>
+input:where([type='button']),<br/>
+input:where([type='reset']),<br/>
+input:where([type='submit']) {<br/>
+  -webkit-appearance: button; /* 1 */<br/>
+  background-color: transparent; /* 2 */<br/>
+  background-image: none; /* 2 */<br/>
+}<br/>
+<br/>
+/*<br/>
+Use the modern Firefox focus style for all focusable elements.<br/>
+*/<br/>
+<br/>
+:-moz-focusring {<br/>
+  outline: auto;<br/>
+}<br/>
+<br/>
+/*<br/>
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)<br/>
+*/<br/>
+<br/>
+:-moz-ui-invalid {<br/>
+  box-shadow: none;<br/>
+}<br/>
+<br/>
+/*<br/>
+Add the correct vertical alignment in Chrome and Firefox.<br/>
+*/<br/>
+<br/>
+progress {<br/>
+  vertical-align: baseline;<br/>
+}<br/>
+<br/>
+/*<br/>
+Correct the cursor style of increment and decrement buttons in Safari.<br/>
+*/<br/>
+<br/>
+::-webkit-inner-spin-button,<br/>
+::-webkit-outer-spin-button {<br/>
+  height: auto;<br/>
+}<br/>
+<br/>
+/*<br/>
+1. Correct the odd appearance in Chrome and Safari.<br/>
+2. Correct the outline style in Safari.<br/>
+*/<br/>
+<br/>
+[type='search'] {<br/>
+  -webkit-appearance: textfield; /* 1 */<br/>
+  outline-offset: -2px; /* 2 */<br/>
+}<br/>
+<br/>
+/*<br/>
+Remove the inner padding in Chrome and Safari on macOS.<br/>
+*/<br/>
+<br/>
+::-webkit-search-decoration {<br/>
+  -webkit-appearance: none;<br/>
+}<br/>
+<br/>
+/*<br/>
+1. Correct the inability to style clickable types in iOS and Safari.<br/>
+2. Change font properties to `inherit` in Safari.<br/>
+*/<br/>
+<br/>
+::-webkit-file-upload-button {<br/>
+  -webkit-appearance: button; /* 1 */<br/>
+  font: inherit; /* 2 */<br/>
+}<br/>
+<br/>
+/*<br/>
+Add the correct display in Chrome and Safari.<br/>
+*/<br/>
+<br/>
+summary {<br/>
+  display: list-item;<br/>
+}<br/>
+<br/>
+/*<br/>
+Removes the default spacing and border for appropriate elements.<br/>
+*/<br/>
+<br/>
+blockquote,<br/>
+dl,<br/>
+dd,<br/>
+h1,<br/>
+h2,<br/>
+h3,<br/>
+h4,<br/>
+h5,<br/>
+h6,<br/>
+hr,<br/>
+figure,<br/>
+p,<br/>
+pre {<br/>
+  margin: 0;<br/>
+}<br/>
+<br/>
+fieldset {<br/>
+  margin: 0;<br/>
+  padding: 0;<br/>
+}<br/>
+<br/>
+legend {<br/>
+  padding: 0;<br/>
+}<br/>
+<br/>
+ol,<br/>
+ul,<br/>
+menu {<br/>
+  list-style: none;<br/>
+  margin: 0;<br/>
+  padding: 0;<br/>
+}<br/>
+<br/>
+/*<br/>
+Reset default styling for dialogs.<br/>
+*/<br/>
+dialog {<br/>
+  padding: 0;<br/>
+}<br/>
+<br/>
+/*<br/>
+Prevent resizing textareas horizontally by default.<br/>
+*/<br/>
+<br/>
+textarea {<br/>
+  resize: vertical;<br/>
+}<br/>
+<br/>
+/*<br/>
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)<br/>
+2. Set the default placeholder color to the user's configured gray 400 color.<br/>
+*/<br/>
+<br/>
+input::placeholder,<br/>
+textarea::placeholder {<br/>
+  opacity: 1; /* 1 */<br/>
+  color: #9ca3af; /* 2 */<br/>
+}<br/>
+<br/>
+/*<br/>
+Set the default cursor for buttons.<br/>
+*/<br/>
+<br/>
+button,<br/>
+[role="button"] {<br/>
+  cursor: pointer;<br/>
+}<br/>
+<br/>
+/*<br/>
+Make sure disabled buttons don't get the pointer cursor.<br/>
+*/<br/>
+:disabled {<br/>
+  cursor: default;<br/>
+}<br/>
+<br/>
+/*<br/>
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)<br/>
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)<br/>
+   This can trigger a poorly considered lint error in some tools but is included by design.<br/>
+*/<br/>
+<br/>
+img,<br/>
+svg,<br/>
+video,<br/>
+canvas,<br/>
+audio,<br/>
+iframe,<br/>
+embed,<br/>
+object {<br/>
+  display: block; /* 1 */<br/>
+  vertical-align: middle; /* 2 */<br/>
+}<br/>
+<br/>
+/*<br/>
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)<br/>
+*/<br/>
+<br/>
+img,<br/>
+video {<br/>
+  max-width: 100%;<br/>
+  height: auto;<br/>
+}<br/>
+<br/>
+/* Make elements with the HTML hidden attribute stay hidden by default */<br/>
+[hidden] {<br/>
+  display: none;<br/>
+}<br/>
+  :root {<br/>
+    --background: 0 0% 100%;<br/>
+    --foreground: 222.2 84% 4.9%;<br/>
+    --card: 212.727 27% 84%;<br/>
+    --card-foreground: 222.2 84% 4.9%;<br/>
+    --popover: 0 0% 100%;<br/>
+    --popover-foreground: 222.2 84% 4.9%;<br/>
+    --primary: 196.225 100% 46%;<br/>
+    --primary-foreground: 210 40% 98%;<br/>
+    --secondary: 210 40% 96.1%;<br/>
+    --secondary-foreground: 222.2 47.4% 11.2%;<br/>
+    --muted: 210 40% 96.1%;<br/>
+    --muted-foreground: 215.4 16.3% 46.9%;<br/>
+    --accent: 210 40% 96.1%;<br/>
+    --accent-foreground: 222.2 47.4% 11.2%;<br/>
+    --destructive: 0 84.2% 60.2%;<br/>
+    --destructive-foreground: 210 40% 98%;<br/>
+    --border: 214.3 31.8% 91.4%;<br/>
+    --input: 214.3 1% 92%;<br/>
+    --ring: 221.2 83.2% 53.3%;<br/>
+    --radius: 0.5rem;<br/>
+    --chart-1: 12 76% 61%;<br/>
+    --chart-2: 173 58% 39%;<br/>
+    --chart-3: 197 37% 24%;<br/>
+    --chart-4: 43 74% 66%;<br/>
+    --chart-5: 0 3% 70%;<br/>
+  }<br/>
+  * {<br/>
+  border-color: hsl(var(--border));<br/>
+}<br/>
+  body {<br/>
+  background-color: hsl(var(--background));<br/>
+  color: hsl(var(--foreground));<br/>
+}<br/>
+<br/>
+*, ::before, ::after {<br/>
+  --tw-border-spacing-x: 0;<br/>
+  --tw-border-spacing-y: 0;<br/>
+  --tw-translate-x: 0;<br/>
+  --tw-translate-y: 0;<br/>
+  --tw-rotate: 0;<br/>
+  --tw-skew-x: 0;<br/>
+  --tw-skew-y: 0;<br/>
+  --tw-scale-x: 1;<br/>
+  --tw-scale-y: 1;<br/>
+  --tw-pan-x:  ;<br/>
+  --tw-pan-y:  ;<br/>
+  --tw-pinch-zoom:  ;<br/>
+  --tw-scroll-snap-strictness: proximity;<br/>
+  --tw-gradient-from-position:  ;<br/>
+  --tw-gradient-via-position:  ;<br/>
+  --tw-gradient-to-position:  ;<br/>
+  --tw-ordinal:  ;<br/>
+  --tw-slashed-zero:  ;<br/>
+  --tw-numeric-figure:  ;<br/>
+  --tw-numeric-spacing:  ;<br/>
+  --tw-numeric-fraction:  ;<br/>
+  --tw-ring-inset:  ;<br/>
+  --tw-ring-offset-width: 0px;<br/>
+  --tw-ring-offset-color: #fff;<br/>
+  --tw-ring-color: rgb(59 130 246 / 0.5);<br/>
+  --tw-ring-offset-shadow: 0 0 #0000;<br/>
+  --tw-ring-shadow: 0 0 #0000;<br/>
+  --tw-shadow: 0 0 #0000;<br/>
+  --tw-shadow-colored: 0 0 #0000;<br/>
+  --tw-blur:  ;<br/>
+  --tw-brightness:  ;<br/>
+  --tw-contrast:  ;<br/>
+  --tw-grayscale:  ;<br/>
+  --tw-hue-rotate:  ;<br/>
+  --tw-invert:  ;<br/>
+  --tw-saturate:  ;<br/>
+  --tw-sepia:  ;<br/>
+  --tw-drop-shadow:  ;<br/>
+  --tw-backdrop-blur:  ;<br/>
+  --tw-backdrop-brightness:  ;<br/>
+  --tw-backdrop-contrast:  ;<br/>
+  --tw-backdrop-grayscale:  ;<br/>
+  --tw-backdrop-hue-rotate:  ;<br/>
+  --tw-backdrop-invert:  ;<br/>
+  --tw-backdrop-opacity:  ;<br/>
+  --tw-backdrop-saturate:  ;<br/>
+  --tw-backdrop-sepia:  ;<br/>
+  --tw-contain-size:  ;<br/>
+  --tw-contain-layout:  ;<br/>
+  --tw-contain-paint:  ;<br/>
+  --tw-contain-style:  ;<br/>
+}<br/>
+<br/>
+::backdrop {<br/>
+  --tw-border-spacing-x: 0;<br/>
+  --tw-border-spacing-y: 0;<br/>
+  --tw-translate-x: 0;<br/>
+  --tw-translate-y: 0;<br/>
+  --tw-rotate: 0;<br/>
+  --tw-skew-x: 0;<br/>
+  --tw-skew-y: 0;<br/>
+  --tw-scale-x: 1;<br/>
+  --tw-scale-y: 1;<br/>
+  --tw-pan-x:  ;<br/>
+  --tw-pan-y:  ;<br/>
+  --tw-pinch-zoom:  ;<br/>
+  --tw-scroll-snap-strictness: proximity;<br/>
+  --tw-gradient-from-position:  ;<br/>
+  --tw-gradient-via-position:  ;<br/>
+  --tw-gradient-to-position:  ;<br/>
+  --tw-ordinal:  ;<br/>
+  --tw-slashed-zero:  ;<br/>
+  --tw-numeric-figure:  ;<br/>
+  --tw-numeric-spacing:  ;<br/>
+  --tw-numeric-fraction:  ;<br/>
+  --tw-ring-inset:  ;<br/>
+  --tw-ring-offset-width: 0px;<br/>
+  --tw-ring-offset-color: #fff;<br/>
+  --tw-ring-color: rgb(59 130 246 / 0.5);<br/>
+  --tw-ring-offset-shadow: 0 0 #0000;<br/>
+  --tw-ring-shadow: 0 0 #0000;<br/>
+  --tw-shadow: 0 0 #0000;<br/>
+  --tw-shadow-colored: 0 0 #0000;<br/>
+  --tw-blur:  ;<br/>
+  --tw-brightness:  ;<br/>
+  --tw-contrast:  ;<br/>
+  --tw-grayscale:  ;<br/>
+  --tw-hue-rotate:  ;<br/>
+  --tw-invert:  ;<br/>
+  --tw-saturate:  ;<br/>
+  --tw-sepia:  ;<br/>
+  --tw-drop-shadow:  ;<br/>
+  --tw-backdrop-blur:  ;<br/>
+  --tw-backdrop-brightness:  ;<br/>
+  --tw-backdrop-contrast:  ;<br/>
+  --tw-backdrop-grayscale:  ;<br/>
+  --tw-backdrop-hue-rotate:  ;<br/>
+  --tw-backdrop-invert:  ;<br/>
+  --tw-backdrop-opacity:  ;<br/>
+  --tw-backdrop-saturate:  ;<br/>
+  --tw-backdrop-sepia:  ;<br/>
+  --tw-contain-size:  ;<br/>
+  --tw-contain-layout:  ;<br/>
+  --tw-contain-paint:  ;<br/>
+  --tw-contain-style:  ;<br/>
+}<br/>
+.sr-only {<br/>
+  position: absolute;<br/>
+  width: 1px;<br/>
+  height: 1px;<br/>
+  padding: 0;<br/>
+  margin: -1px;<br/>
+  overflow: hidden;<br/>
+  clip: rect(0, 0, 0, 0);<br/>
+  white-space: nowrap;<br/>
+  border-width: 0;<br/>
+}<br/>
+.pointer-events-auto {<br/>
+  pointer-events: auto;<br/>
+}<br/>
+.invisible {<br/>
+  visibility: hidden;<br/>
+}<br/>
+.fixed {<br/>
+  position: fixed;<br/>
+}<br/>
+.absolute {<br/>
+  position: absolute;<br/>
+}<br/>
+.relative {<br/>
+  position: relative;<br/>
+}<br/>
+.inset-0 {<br/>
+  inset: 0px;<br/>
+}<br/>
+.inset-x-0 {<br/>
+  left: 0px;<br/>
+  right: 0px;<br/>
+}<br/>
+.inset-y-0 {<br/>
+  top: 0px;<br/>
+  bottom: 0px;<br/>
+}<br/>
+.bottom-0 {<br/>
+  bottom: 0px;<br/>
+}<br/>
+.left-0 {<br/>
+  left: 0px;<br/>
+}<br/>
+.left-1 {<br/>
+  left: 0.25rem;<br/>
+}<br/>
+.left-2 {<br/>
+  left: 0.5rem;<br/>
+}<br/>
+.left-\[50\%\] {<br/>
+  left: 50%;<br/>
+}<br/>
+.right-0 {<br/>
+  right: 0px;<br/>
+}<br/>
+.right-1 {<br/>
+  right: 0.25rem;<br/>
+}<br/>
+.right-4 {<br/>
+  right: 1rem;<br/>
+}<br/>
+.top-0 {<br/>
+  top: 0px;<br/>
+}<br/>
+.top-1 {<br/>
+  top: 0.25rem;<br/>
+}<br/>
+.top-1\/2 {<br/>
+  top: 50%;<br/>
+}<br/>
+.top-4 {<br/>
+  top: 1rem;<br/>
+}<br/>
+.top-\[50\%\] {<br/>
+  top: 50%;<br/>
+}<br/>
+.z-50 {<br/>
+  z-index: 50;<br/>
+}<br/>
+.z-\[100\] {<br/>
+  z-index: 100;<br/>
+}<br/>
+.-mx-1 {<br/>
+  margin-left: -0.25rem;<br/>
+  margin-right: -0.25rem;<br/>
+}<br/>
+.-mt-1 {<br/>
+  margin-top: -0.25rem;<br/>
+}<br/>
+.mb-4 {<br/>
+  margin-bottom: 1rem;<br/>
+}<br/>
+.mb-6 {<br/>
+  margin-bottom: 1.5rem;<br/>
+}<br/>
+.ml-2 {<br/>
+  margin-left: 0.5rem;<br/>
+}<br/>
+.ml-4 {<br/>
+  margin-left: 1rem;<br/>
+}<br/>
+.ml-auto {<br/>
+  margin-left: auto;<br/>
+}<br/>
+.mr-2 {<br/>
+  margin-right: 0.5rem;<br/>
+}<br/>
+.mt-10 {<br/>
+  margin-top: 2.5rem;<br/>
+}<br/>
+.mt-2 {<br/>
+  margin-top: 0.5rem;<br/>
+}<br/>
+.mt-5 {<br/>
+  margin-top: 1.25rem;<br/>
+}<br/>
+.block {<br/>
+  display: block;<br/>
+}<br/>
+.flex {<br/>
+  display: flex;<br/>
+}<br/>
+.inline-flex {<br/>
+  display: inline-flex;<br/>
+}<br/>
+.table {<br/>
+  display: table;<br/>
+}<br/>
+.grid {<br/>
+  display: grid;<br/>
+}<br/>
+.hidden {<br/>
+  display: none;<br/>
+}<br/>
+.aspect-square {<br/>
+  aspect-ratio: 1 / 1;<br/>
+}<br/>
+.h-10 {<br/>
+  height: 2.5rem;<br/>
+}<br/>
+.h-12 {<br/>
+  height: 3rem;<br/>
+}<br/>
+.h-3\.5 {<br/>
+  height: 0.875rem;<br/>
+}<br/>
+.h-4 {<br/>
+  height: 1rem;<br/>
+}<br/>
+.h-7 {<br/>
+  height: 1.75rem;<br/>
+}<br/>
+.h-8 {<br/>
+  height: 2rem;<br/>
+}<br/>
+.h-9 {<br/>
+  height: 2.25rem;<br/>
+}<br/>
+.h-full {<br/>
+  height: 100%;<br/>
+}<br/>
+.h-px {<br/>
+  height: 1px;<br/>
+}<br/>
+.max-h-24 {<br/>
+  max-height: 6rem;<br/>
+}<br/>
+.max-h-\[300px\] {<br/>
+  max-height: 300px;<br/>
+}<br/>
+.max-h-screen {<br/>
+  max-height: 100vh;<br/>
+}<br/>
+.w-10 {<br/>
+  width: 2.5rem;<br/>
+}<br/>
+.w-12 {<br/>
+  width: 3rem;<br/>
+}<br/>
+.w-2\/5 {<br/>
+  width: 40%;<br/>
+}<br/>
+.w-20 {<br/>
+  width: 5rem;<br/>
+}<br/>
+.w-3\.5 {<br/>
+  width: 0.875rem;<br/>
+}<br/>
+.w-3\/4 {<br/>
+  width: 75%;<br/>
+}<br/>
+.w-4 {<br/>
+  width: 1rem;<br/>
+}<br/>
+.w-4\/5 {<br/>
+  width: 80%;<br/>
+}<br/>
+.w-40 {<br/>
+  width: 10rem;<br/>
+}<br/>
+.w-7 {<br/>
+  width: 1.75rem;<br/>
+}<br/>
+.w-72 {<br/>
+  width: 18rem;<br/>
+}<br/>
+.w-8 {<br/>
+  width: 2rem;<br/>
+}<br/>
+.w-9 {<br/>
+  width: 2.25rem;<br/>
+}<br/>
+.w-\[200px\] {<br/>
+  width: 200px;<br/>
+}<br/>
+.w-auto {<br/>
+  width: auto;<br/>
+}<br/>
+.w-full {<br/>
+  width: 100%;<br/>
+}<br/>
+.max-w-lg {<br/>
+  max-width: 32rem;<br/>
+}<br/>
+.max-w-sm {<br/>
+  max-width: 24rem;<br/>
+}<br/>
+.shrink-0 {<br/>
+  flex-shrink: 0;<br/>
+}<br/>
+.border-collapse {<br/>
+  border-collapse: collapse;<br/>
+}<br/>
+.-translate-y-1\/2 {<br/>
+  --tw-translate-y: -50%;<br/>
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));<br/>
+}<br/>
+.translate-x-\[-50\%\] {<br/>
+  --tw-translate-x: -50%;<br/>
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));<br/>
+}<br/>
+.translate-y-\[-50\%\] {<br/>
+  --tw-translate-y: -50%;<br/>
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));<br/>
+}<br/>
+.transform {<br/>
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));<br/>
+}<br/>
+.cursor-default {<br/>
+  cursor: default;<br/>
+}<br/>
+.cursor-pointer {<br/>
+  cursor: pointer;<br/>
+}<br/>
+.select-none {<br/>
+  user-select: none;<br/>
+}<br/>
+.flex-col {<br/>
+  flex-direction: column;<br/>
+}<br/>
+.flex-col-reverse {<br/>
+  flex-direction: column-reverse;<br/>
+}<br/>
+.items-center {<br/>
+  align-items: center;<br/>
+}<br/>
+.justify-center {<br/>
+  justify-content: center;<br/>
+}<br/>
+.justify-between {<br/>
+  justify-content: space-between;<br/>
+}<br/>
+.justify-around {<br/>
+  justify-content: space-around;<br/>
+}<br/>
+.gap-1 {<br/>
+  gap: 0.25rem;<br/>
+}<br/>
+.gap-1\.5 {<br/>
+  gap: 0.375rem;<br/>
+}<br/>
+.gap-10 {<br/>
+  gap: 2.5rem;<br/>
+}<br/>
+.gap-2 {<br/>
+  gap: 0.5rem;<br/>
+}<br/>
+.gap-3 {<br/>
+  gap: 0.75rem;<br/>
+}<br/>
+.gap-36 {<br/>
+  gap: 9rem;<br/>
+}<br/>
+.gap-4 {<br/>
+  gap: 1rem;<br/>
+}<br/>
+.gap-5 {<br/>
+  gap: 1.25rem;<br/>
+}<br/>
+.gap-6 {<br/>
+  gap: 1.5rem;<br/>
+}<br/>
+.gap-8 {<br/>
+  gap: 2rem;<br/>
+}<br/>
+.space-x-1 &gt; :not([hidden]) ~ :not([hidden]) {<br/>
+  --tw-space-x-reverse: 0;<br/>
+  margin-right: calc(0.25rem * var(--tw-space-x-reverse));<br/>
+  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));<br/>
+}<br/>
+.space-x-2 &gt; :not([hidden]) ~ :not([hidden]) {<br/>
+  --tw-space-x-reverse: 0;<br/>
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));<br/>
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));<br/>
+}<br/>
+.space-x-4 &gt; :not([hidden]) ~ :not([hidden]) {<br/>
+  --tw-space-x-reverse: 0;<br/>
+  margin-right: calc(1rem * var(--tw-space-x-reverse));<br/>
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));<br/>
+}<br/>
+.space-y-1 &gt; :not([hidden]) ~ :not([hidden]) {<br/>
+  --tw-space-y-reverse: 0;<br/>
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));<br/>
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));<br/>
+}<br/>
+.space-y-1\.5 &gt; :not([hidden]) ~ :not([hidden]) {<br/>
+  --tw-space-y-reverse: 0;<br/>
+  margin-top: calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));<br/>
+  margin-bottom: calc(0.375rem * var(--tw-space-y-reverse));<br/>
+}<br/>
+.space-y-2 &gt; :not([hidden]) ~ :not([hidden]) {<br/>
+  --tw-space-y-reverse: 0;<br/>
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));<br/>
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));<br/>
+}<br/>
+.space-y-4 &gt; :not([hidden]) ~ :not([hidden]) {<br/>
+  --tw-space-y-reverse: 0;<br/>
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));<br/>
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));<br/>
+}<br/>
+.overflow-hidden {<br/>
+  overflow: hidden;<br/>
+}<br/>
+.overflow-y-auto {<br/>
+  overflow-y: auto;<br/>
+}<br/>
+.overflow-x-hidden {<br/>
+  overflow-x: hidden;<br/>
+}<br/>
+.whitespace-nowrap {<br/>
+  white-space: nowrap;<br/>
+}<br/>
+.rounded-2xl {<br/>
+  border-radius: 1rem;<br/>
+}<br/>
+.rounded-3xl {<br/>
+  border-radius: 1.5rem;<br/>
+}<br/>
+.rounded-full {<br/>
+  border-radius: 9999px;<br/>
+}<br/>
+.rounded-lg {<br/>
+  border-radius: var(--radius);<br/>
+}<br/>
+.rounded-md {<br/>
+  border-radius: calc(var(--radius) - 2px);<br/>
+}<br/>
+.rounded-sm {<br/>
+  border-radius: calc(var(--radius) - 4px);<br/>
+}<br/>
+.border {<br/>
+  border-width: 1px;<br/>
+}<br/>
+.border-b {<br/>
+  border-bottom-width: 1px;<br/>
+}<br/>
+.border-b-2 {<br/>
+  border-bottom-width: 2px;<br/>
+}<br/>
+.border-l {<br/>
+  border-left-width: 1px;<br/>
+}<br/>
+.border-r {<br/>
+  border-right-width: 1px;<br/>
+}<br/>
+.border-t {<br/>
+  border-top-width: 1px;<br/>
+}<br/>
+.border-t-2 {<br/>
+  border-top-width: 2px;<br/>
+}<br/>
+.border-black {<br/>
+  --tw-border-opacity: 1;<br/>
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));<br/>
+}<br/>
+.border-border {<br/>
+  border-color: hsl(var(--border));<br/>
+}<br/>
+.border-chart-5 {<br/>
+  border-color: hsl(var(--chart-5));<br/>
+}<br/>
+.border-destructive {<br/>
+  border-color: hsl(var(--destructive));<br/>
+}<br/>
+.border-gray-300 {<br/>
+  --tw-border-opacity: 1;<br/>
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));<br/>
+}<br/>
+.border-input {<br/>
+  border-color: hsl(var(--input));<br/>
+}<br/>
+.border-primary {<br/>
+  border-color: hsl(var(--primary));<br/>
+}<br/>
+.bg-accent {<br/>
+  background-color: hsl(var(--accent));<br/>
+}<br/>
+.bg-background {<br/>
+  background-color: hsl(var(--background));<br/>
+}<br/>
+.bg-black {<br/>
+  --tw-bg-opacity: 1;<br/>
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));<br/>
+}<br/>
+.bg-black\/80 {<br/>
+  background-color: rgb(0 0 0 / 0.8);<br/>
+}<br/>
+.bg-border {<br/>
+  background-color: hsl(var(--border));<br/>
+}<br/>
+.bg-card {<br/>
+  background-color: hsl(var(--card));<br/>
+}<br/>
+.bg-chart-5 {<br/>
+  background-color: hsl(var(--chart-5));<br/>
+}<br/>
+.bg-destructive {<br/>
+  background-color: hsl(var(--destructive));<br/>
+}<br/>
+.bg-gray-200 {<br/>
+  --tw-bg-opacity: 1;<br/>
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));<br/>
+}<br/>
+.bg-green-500 {<br/>
+  --tw-bg-opacity: 1;<br/>
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));<br/>
+}<br/>
+.bg-input {<br/>
+  background-color: hsl(var(--input));<br/>
+}<br/>
+.bg-muted {<br/>
+  background-color: hsl(var(--muted));<br/>
+}<br/>
+.bg-popover {<br/>
+  background-color: hsl(var(--popover));<br/>
+}<br/>
+.bg-primary {<br/>
+  background-color: hsl(var(--primary));<br/>
+}<br/>
+.bg-secondary {<br/>
+  background-color: hsl(var(--secondary));<br/>
+}<br/>
+.bg-transparent {<br/>
+  background-color: transparent;<br/>
+}<br/>
+.bg-white {<br/>
+  --tw-bg-opacity: 1;<br/>
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));<br/>
+}<br/>
+.fill-black {<br/>
+  fill: #000;<br/>
+}<br/>
+.p-0 {<br/>
+  padding: 0px;<br/>
+}<br/>
+.p-1 {<br/>
+  padding: 0.25rem;<br/>
+}<br/>
+.p-2 {<br/>
+  padding: 0.5rem;<br/>
+}<br/>
+.p-3 {<br/>
+  padding: 0.75rem;<br/>
+}<br/>
+.p-4 {<br/>
+  padding: 1rem;<br/>
+}<br/>
+.p-5 {<br/>
+  padding: 1.25rem;<br/>
+}<br/>
+.p-6 {<br/>
+  padding: 1.5rem;<br/>
+}<br/>
+.p-\[1px\] {<br/>
+  padding: 1px;<br/>
+}<br/>
+.px-2 {<br/>
+  padding-left: 0.5rem;<br/>
+  padding-right: 0.5rem;<br/>
+}<br/>
+.px-3 {<br/>
+  padding-left: 0.75rem;<br/>
+  padding-right: 0.75rem;<br/>
+}<br/>
+.px-4 {<br/>
+  padding-left: 1rem;<br/>
+  padding-right: 1rem;<br/>
+}<br/>
+.px-8 {<br/>
+  padding-left: 2rem;<br/>
+  padding-right: 2rem;<br/>
+}<br/>
+.py-1 {<br/>
+  padding-top: 0.25rem;<br/>
+  padding-bottom: 0.25rem;<br/>
+}<br/>
+.py-1\.5 {<br/>
+  padding-top: 0.375rem;<br/>
+  padding-bottom: 0.375rem;<br/>
+}<br/>
+.py-2 {<br/>
+  padding-top: 0.5rem;<br/>
+  padding-bottom: 0.5rem;<br/>
+}<br/>
+.py-3 {<br/>
+  padding-top: 0.75rem;<br/>
+  padding-bottom: 0.75rem;<br/>
+}<br/>
+.py-6 {<br/>
+  padding-top: 1.5rem;<br/>
+  padding-bottom: 1.5rem;<br/>
+}<br/>
+.pr-6 {<br/>
+  padding-right: 1.5rem;<br/>
+}<br/>
+.pt-1 {<br/>
+  padding-top: 0.25rem;<br/>
+}<br/>
+.pt-10 {<br/>
+  padding-top: 2.5rem;<br/>
+}<br/>
+.text-center {<br/>
+  text-align: center;<br/>
+}<br/>
+.text-2xl {<br/>
+  font-size: 1.5rem;<br/>
+  line-height: 2rem;<br/>
+}<br/>
+.text-4xl {<br/>
+  font-size: 2.25rem;<br/>
+  line-height: 2.5rem;<br/>
+}<br/>
+.text-\[0\.8rem\] {<br/>
+  font-size: 0.8rem;<br/>
+}<br/>
+.text-lg {<br/>
+  font-size: 1.125rem;<br/>
+  line-height: 1.75rem;<br/>
+}<br/>
+.text-sm {<br/>
+  font-size: 0.875rem;<br/>
+  line-height: 1.25rem;<br/>
+}<br/>
+.text-xl {<br/>
+  font-size: 1.25rem;<br/>
+  line-height: 1.75rem;<br/>
+}<br/>
+.text-xs {<br/>
+  font-size: 0.75rem;<br/>
+  line-height: 1rem;<br/>
+}<br/>
+.font-bold {<br/>
+  font-weight: 700;<br/>
+}<br/>
+.font-extrabold {<br/>
+  font-weight: 800;<br/>
+}<br/>
+.font-medium {<br/>
+  font-weight: 500;<br/>
+}<br/>
+.font-normal {<br/>
+  font-weight: 400;<br/>
+}<br/>
+.font-semibold {<br/>
+  font-weight: 600;<br/>
+}<br/>
+.leading-none {<br/>
+  line-height: 1;<br/>
+}<br/>
+.tracking-tight {<br/>
+  letter-spacing: -0.025em;<br/>
+}<br/>
+.tracking-widest {<br/>
+  letter-spacing: 0.1em;<br/>
+}<br/>
+.text-accent-foreground {<br/>
+  color: hsl(var(--accent-foreground));<br/>
+}<br/>
+.text-black {<br/>
+  --tw-text-opacity: 1;<br/>
+  color: rgb(0 0 0 / var(--tw-text-opacity));<br/>
+}<br/>
+.text-chart-5 {<br/>
+  color: hsl(var(--chart-5));<br/>
+}<br/>
+.text-destructive {<br/>
+  color: hsl(var(--destructive));<br/>
+}<br/>
+.text-destructive-foreground {<br/>
+  color: hsl(var(--destructive-foreground));<br/>
+}<br/>
+.text-foreground {<br/>
+  color: hsl(var(--foreground));<br/>
+}<br/>
+.text-foreground\/50 {<br/>
+  color: hsl(var(--foreground) / 0.5);<br/>
+}<br/>
+.text-gray-400 {<br/>
+  --tw-text-opacity: 1;<br/>
+  color: rgb(156 163 175 / var(--tw-text-opacity));<br/>
+}<br/>
+.text-gray-500 {<br/>
+  --tw-text-opacity: 1;<br/>
+  color: rgb(107 114 128 / var(--tw-text-opacity));<br/>
+}<br/>
+.text-input {<br/>
+  color: hsl(var(--input));<br/>
+}<br/>
+.text-muted-foreground {<br/>
+  color: hsl(var(--muted-foreground));<br/>
+}<br/>
+.text-orange-400 {<br/>
+  --tw-text-opacity: 1;<br/>
+  color: rgb(251 146 60 / var(--tw-text-opacity));<br/>
+}<br/>
+.text-popover-foreground {<br/>
+  color: hsl(var(--popover-foreground));<br/>
+}<br/>
+.text-primary {<br/>
+  color: hsl(var(--primary));<br/>
+}<br/>
+.text-primary-foreground {<br/>
+  color: hsl(var(--primary-foreground));<br/>
+}<br/>
+.text-secondary-foreground {<br/>
+  color: hsl(var(--secondary-foreground));<br/>
+}<br/>
+.text-white {<br/>
+  --tw-text-opacity: 1;<br/>
+  color: rgb(255 255 255 / var(--tw-text-opacity));<br/>
+}<br/>
+.underline-offset-4 {<br/>
+  text-underline-offset: 4px;<br/>
+}<br/>
+.antialiased {<br/>
+  -webkit-font-smoothing: antialiased;<br/>
+  -moz-osx-font-smoothing: grayscale;<br/>
+}<br/>
+.opacity-0 {<br/>
+  opacity: 0;<br/>
+}<br/>
+.opacity-100 {<br/>
+  opacity: 1;<br/>
+}<br/>
+.opacity-50 {<br/>
+  opacity: 0.5;<br/>
+}<br/>
+.opacity-70 {<br/>
+  opacity: 0.7;<br/>
+}<br/>
+.opacity-90 {<br/>
+  opacity: 0.9;<br/>
+}<br/>
+.shadow {<br/>
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);<br/>
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);<br/>
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);<br/>
+}<br/>
+.shadow-lg {<br/>
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);<br/>
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);<br/>
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);<br/>
+}<br/>
+.shadow-md {<br/>
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);<br/>
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);<br/>
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);<br/>
+}<br/>
+.shadow-sm {<br/>
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);<br/>
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);<br/>
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);<br/>
+}<br/>
+.outline-none {<br/>
+  outline: 2px solid transparent;<br/>
+  outline-offset: 2px;<br/>
+}<br/>
+.outline {<br/>
+  outline-style: solid;<br/>
+}<br/>
+.ring-offset-background {<br/>
+  --tw-ring-offset-color: hsl(var(--background));<br/>
+}<br/>
+.filter {<br/>
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);<br/>
+}<br/>
+.transition {<br/>
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;<br/>
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/>
+  transition-duration: 150ms;<br/>
+}<br/>
+.transition-all {<br/>
+  transition-property: all;<br/>
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/>
+  transition-duration: 150ms;<br/>
+}<br/>
+.transition-colors {<br/>
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;<br/>
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/>
+  transition-duration: 150ms;<br/>
+}<br/>
+.transition-opacity {<br/>
+  transition-property: opacity;<br/>
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/>
+  transition-duration: 150ms;<br/>
+}<br/>
+.duration-200 {<br/>
+  transition-duration: 200ms;<br/>
+}<br/>
+.ease-in-out {<br/>
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/>
+}<br/>
+@keyframes enter {<br/>
+<br/>
+  from {<br/>
+    opacity: var(--tw-enter-opacity, 1);<br/>
+    transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0));<br/>
+  }<br/>
+}<br/>
+@keyframes exit {<br/>
+<br/>
+  to {<br/>
+    opacity: var(--tw-exit-opacity, 1);<br/>
+    transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0));<br/>
+  }<br/>
+}<br/>
+.duration-200 {<br/>
+  animation-duration: 200ms;<br/>
+}<br/>
+.ease-in-out {<br/>
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/>
+}<br/>
+<br/>
+.file\:border-0::file-selector-button {<br/>
+  border-width: 0px;<br/>
+}<br/>
+<br/>
+.file\:bg-transparent::file-selector-button {<br/>
+  background-color: transparent;<br/>
+}<br/>
+<br/>
+.file\:text-sm::file-selector-button {<br/>
+  font-size: 0.875rem;<br/>
+  line-height: 1.25rem;<br/>
+}<br/>
+<br/>
+.file\:font-medium::file-selector-button {<br/>
+  font-weight: 500;<br/>
+}<br/>
+<br/>
+.file\:text-foreground::file-selector-button {<br/>
+  color: hsl(var(--foreground));<br/>
+}<br/>
+<br/>
+.placeholder\:text-black::placeholder {<br/>
+  --tw-text-opacity: 1;<br/>
+  color: rgb(0 0 0 / var(--tw-text-opacity));<br/>
+}<br/>
+<br/>
+.placeholder\:text-muted-foreground::placeholder {<br/>
+  color: hsl(var(--muted-foreground));<br/>
+}<br/>
+<br/>
+.focus-within\:relative:focus-within {<br/>
+  position: relative;<br/>
+}<br/>
+<br/>
+.focus-within\:z-20:focus-within {<br/>
+  z-index: 20;<br/>
+}<br/>
+<br/>
+.hover\:border-b-2:hover {<br/>
+  border-bottom-width: 2px;<br/>
+}<br/>
+<br/>
+.hover\:border-black:hover {<br/>
+  --tw-border-opacity: 1;<br/>
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));<br/>
+}<br/>
+<br/>
+.hover\:bg-accent:hover {<br/>
+  background-color: hsl(var(--accent));<br/>
+}<br/>
+<br/>
+.hover\:bg-destructive\/90:hover {<br/>
+  background-color: hsl(var(--destructive) / 0.9);<br/>
+}<br/>
+<br/>
+.hover\:bg-primary:hover {<br/>
+  background-color: hsl(var(--primary));<br/>
+}<br/>
+<br/>
+.hover\:bg-primary\/90:hover {<br/>
+  background-color: hsl(var(--primary) / 0.9);<br/>
+}<br/>
+<br/>
+.hover\:bg-secondary:hover {<br/>
+  background-color: hsl(var(--secondary));<br/>
+}<br/>
+<br/>
+.hover\:bg-secondary\/80:hover {<br/>
+  background-color: hsl(var(--secondary) / 0.8);<br/>
+}<br/>
+<br/>
+.hover\:text-accent-foreground:hover {<br/>
+  color: hsl(var(--accent-foreground));<br/>
+}<br/>
+<br/>
+.hover\:text-foreground:hover {<br/>
+  color: hsl(var(--foreground));<br/>
+}<br/>
+<br/>
+.hover\:text-primary-foreground:hover {<br/>
+  color: hsl(var(--primary-foreground));<br/>
+}<br/>
+<br/>
+.hover\:underline:hover {<br/>
+  text-decoration-line: underline;<br/>
+}<br/>
+<br/>
+.hover\:opacity-100:hover {<br/>
+  opacity: 1;<br/>
+}<br/>
+<br/>
+.focus\:bg-primary:focus {<br/>
+  background-color: hsl(var(--primary));<br/>
+}<br/>
+<br/>
+.focus\:text-primary-foreground:focus {<br/>
+  color: hsl(var(--primary-foreground));<br/>
+}<br/>
+<br/>
+.focus\:opacity-100:focus {<br/>
+  opacity: 1;<br/>
+}<br/>
+<br/>
+.focus\:outline-none:focus {<br/>
+  outline: 2px solid transparent;<br/>
+  outline-offset: 2px;<br/>
+}<br/>
+<br/>
+.focus\:ring-1:focus {<br/>
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);<br/>
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);<br/>
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);<br/>
+}<br/>
+<br/>
+.focus\:ring-2:focus {<br/>
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);<br/>
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);<br/>
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);<br/>
+}<br/>
+<br/>
+.focus\:ring-ring:focus {<br/>
+  --tw-ring-color: hsl(var(--ring));<br/>
+}<br/>
+<br/>
+.focus\:ring-offset-2:focus {<br/>
+  --tw-ring-offset-width: 2px;<br/>
+}<br/>
+<br/>
+.focus-visible\:outline-none:focus-visible {<br/>
+  outline: 2px solid transparent;<br/>
+  outline-offset: 2px;<br/>
+}<br/>
+<br/>
+.focus-visible\:ring-1:focus-visible {<br/>
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);<br/>
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);<br/>
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);<br/>
+}<br/>
+<br/>
+.focus-visible\:ring-ring:focus-visible {<br/>
+  --tw-ring-color: hsl(var(--ring));<br/>
+}<br/>
+<br/>
+.disabled\:pointer-events-none:disabled {<br/>
+  pointer-events: none;<br/>
+}<br/>
+<br/>
+.disabled\:cursor-not-allowed:disabled {<br/>
+  cursor: not-allowed;<br/>
+}<br/>
+<br/>
+.disabled\:opacity-30:disabled {<br/>
+  opacity: 0.3;<br/>
+}<br/>
+<br/>
+.disabled\:opacity-50:disabled {<br/>
+  opacity: 0.5;<br/>
+}<br/>
+<br/>
+.group:hover .group-hover\:opacity-100 {<br/>
+  opacity: 1;<br/>
+}<br/>
+<br/>
+.group.destructive .group-\[\.destructive\]\:border-muted\/40 {<br/>
+  border-color: hsl(var(--muted) / 0.4);<br/>
+}<br/>
+<br/>
+.group.destructive .group-\[\.destructive\]\:text-red-300 {<br/>
+  --tw-text-opacity: 1;<br/>
+  color: rgb(252 165 165 / var(--tw-text-opacity));<br/>
+}<br/>
+<br/>
+.group.destructive .group-\[\.destructive\]\:hover\:border-destructive\/30:hover {<br/>
+  border-color: hsl(var(--destructive) / 0.3);<br/>
+}<br/>
+<br/>
+.group.destructive .group-\[\.destructive\]\:hover\:bg-destructive:hover {<br/>
+  background-color: hsl(var(--destructive));<br/>
+}<br/>
+<br/>
+.group.destructive .group-\[\.destructive\]\:hover\:text-destructive-foreground:hover {<br/>
+  color: hsl(var(--destructive-foreground));<br/>
+}<br/>
+<br/>
+.group.destructive .group-\[\.destructive\]\:hover\:text-red-50:hover {<br/>
+  --tw-text-opacity: 1;<br/>
+  color: rgb(254 242 242 / var(--tw-text-opacity));<br/>
+}<br/>
+<br/>
+.group.destructive .group-\[\.destructive\]\:focus\:ring-destructive:focus {<br/>
+  --tw-ring-color: hsl(var(--destructive));<br/>
+}<br/>
+<br/>
+.group.destructive .group-\[\.destructive\]\:focus\:ring-red-400:focus {<br/>
+  --tw-ring-opacity: 1;<br/>
+  --tw-ring-color: rgb(248 113 113 / var(--tw-ring-opacity));<br/>
+}<br/>
+<br/>
+.group.destructive .group-\[\.destructive\]\:focus\:ring-offset-red-600:focus {<br/>
+  --tw-ring-offset-color: #dc2626;<br/>
+}<br/>
+<br/>
+.peer:disabled ~ .peer-disabled\:cursor-not-allowed {<br/>
+  cursor: not-allowed;<br/>
+}<br/>
+<br/>
+.peer:disabled ~ .peer-disabled\:opacity-70 {<br/>
+  opacity: 0.7;<br/>
+}<br/>
+<br/>
+.aria-selected\:bg-accent[aria-selected="true"] {<br/>
+  background-color: hsl(var(--accent));<br/>
+}<br/>
+<br/>
+.aria-selected\:bg-accent\/50[aria-selected="true"] {<br/>
+  background-color: hsl(var(--accent) / 0.5);<br/>
+}<br/>
+<br/>
+.aria-selected\:text-accent-foreground[aria-selected="true"] {<br/>
+  color: hsl(var(--accent-foreground));<br/>
+}<br/>
+<br/>
+.aria-selected\:text-muted-foreground[aria-selected="true"] {<br/>
+  color: hsl(var(--muted-foreground));<br/>
+}<br/>
+<br/>
+.aria-selected\:opacity-100[aria-selected="true"] {<br/>
+  opacity: 1;<br/>
+}<br/>
+<br/>
+.aria-selected\:opacity-30[aria-selected="true"] {<br/>
+  opacity: 0.3;<br/>
+}<br/>
+<br/>
+.data-\[disabled\=true\]\:pointer-events-none[data-disabled="true"] {<br/>
+  pointer-events: none;<br/>
+}<br/>
+<br/>
+.data-\[swipe\=cancel\]\:translate-x-0[data-swipe="cancel"] {<br/>
+  --tw-translate-x: 0px;<br/>
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));<br/>
+}<br/>
+<br/>
+.data-\[swipe\=end\]\:translate-x-\[var\(--radix-toast-swipe-end-x\)\][data-swipe="end"] {<br/>
+  --tw-translate-x: var(--radix-toast-swipe-end-x);<br/>
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));<br/>
+}<br/>
+<br/>
+.data-\[swipe\=move\]\:translate-x-\[var\(--radix-toast-swipe-move-x\)\][data-swipe="move"] {<br/>
+  --tw-translate-x: var(--radix-toast-swipe-move-x);<br/>
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));<br/>
+}<br/>
+<br/>
+.data-\[selected\=true\]\:bg-accent[data-selected="true"] {<br/>
+  background-color: hsl(var(--accent));<br/>
+}<br/>
+<br/>
+.data-\[state\=open\]\:bg-accent[data-state="open"] {<br/>
+  background-color: hsl(var(--accent));<br/>
+}<br/>
+<br/>
+.data-\[state\=open\]\:bg-secondary[data-state="open"] {<br/>
+  background-color: hsl(var(--secondary));<br/>
+}<br/>
+<br/>
+.data-\[selected\=true\]\:text-accent-foreground[data-selected="true"] {<br/>
+  color: hsl(var(--accent-foreground));<br/>
+}<br/>
+<br/>
+.data-\[state\=open\]\:text-muted-foreground[data-state="open"] {<br/>
+  color: hsl(var(--muted-foreground));<br/>
+}<br/>
+<br/>
+.data-\[disabled\=true\]\:opacity-50[data-disabled="true"] {<br/>
+  opacity: 0.5;<br/>
+}<br/>
+<br/>
+.data-\[swipe\=move\]\:transition-none[data-swipe="move"] {<br/>
+  transition-property: none;<br/>
+}<br/>
+<br/>
+.data-\[state\=closed\]\:duration-300[data-state="closed"] {<br/>
+  transition-duration: 300ms;<br/>
+}<br/>
+<br/>
+.data-\[state\=open\]\:duration-500[data-state="open"] {<br/>
+  transition-duration: 500ms;<br/>
+}<br/>
+<br/>
+.data-\[state\=open\]\:animate-in[data-state="open"] {<br/>
+  animation-name: enter;<br/>
+  animation-duration: 150ms;<br/>
+  --tw-enter-opacity: initial;<br/>
+  --tw-enter-scale: initial;<br/>
+  --tw-enter-rotate: initial;<br/>
+  --tw-enter-translate-x: initial;<br/>
+  --tw-enter-translate-y: initial;<br/>
+}<br/>
+<br/>
+.data-\[state\=closed\]\:animate-out[data-state="closed"] {<br/>
+  animation-name: exit;<br/>
+  animation-duration: 150ms;<br/>
+  --tw-exit-opacity: initial;<br/>
+  --tw-exit-scale: initial;<br/>
+  --tw-exit-rotate: initial;<br/>
+  --tw-exit-translate-x: initial;<br/>
+  --tw-exit-translate-y: initial;<br/>
+}<br/>
+<br/>
+.data-\[swipe\=end\]\:animate-out[data-swipe="end"] {<br/>
+  animation-name: exit;<br/>
+  animation-duration: 150ms;<br/>
+  --tw-exit-opacity: initial;<br/>
+  --tw-exit-scale: initial;<br/>
+  --tw-exit-rotate: initial;<br/>
+  --tw-exit-translate-x: initial;<br/>
+  --tw-exit-translate-y: initial;<br/>
+}<br/>
+<br/>
+.data-\[state\=closed\]\:fade-out-0[data-state="closed"] {<br/>
+  --tw-exit-opacity: 0;<br/>
+}<br/>
+<br/>
+.data-\[state\=closed\]\:fade-out-80[data-state="closed"] {<br/>
+  --tw-exit-opacity: 0.8;<br/>
+}<br/>
+<br/>
+.data-\[state\=open\]\:fade-in-0[data-state="open"] {<br/>
+  --tw-enter-opacity: 0;<br/>
+}<br/>
+<br/>
+.data-\[state\=closed\]\:zoom-out-95[data-state="closed"] {<br/>
+  --tw-exit-scale: .95;<br/>
+}<br/>
+<br/>
+.data-\[state\=open\]\:zoom-in-95[data-state="open"] {<br/>
+  --tw-enter-scale: .95;<br/>
+}<br/>
+<br/>
+.data-\[side\=bottom\]\:slide-in-from-top-2[data-side="bottom"] {<br/>
+  --tw-enter-translate-y: -0.5rem;<br/>
+}<br/>
+<br/>
+.data-\[side\=left\]\:slide-in-from-right-2[data-side="left"] {<br/>
+  --tw-enter-translate-x: 0.5rem;<br/>
+}<br/>
+<br/>
+.data-\[side\=right\]\:slide-in-from-left-2[data-side="right"] {<br/>
+  --tw-enter-translate-x: -0.5rem;<br/>
+}<br/>
+<br/>
+.data-\[side\=top\]\:slide-in-from-bottom-2[data-side="top"] {<br/>
+  --tw-enter-translate-y: 0.5rem;<br/>
+}<br/>
+<br/>
+.data-\[state\=closed\]\:slide-out-to-bottom[data-state="closed"] {<br/>
+  --tw-exit-translate-y: 100%;<br/>
+}<br/>
+<br/>
+.data-\[state\=closed\]\:slide-out-to-left[data-state="closed"] {<br/>
+  --tw-exit-translate-x: -100%;<br/>
+}<br/>
+<br/>
+.data-\[state\=closed\]\:slide-out-to-left-1\/2[data-state="closed"] {<br/>
+  --tw-exit-translate-x: -50%;<br/>
+}<br/>
+<br/>
+.data-\[state\=closed\]\:slide-out-to-right[data-state="closed"] {<br/>
+  --tw-exit-translate-x: 100%;<br/>
+}<br/>
+<br/>
+.data-\[state\=closed\]\:slide-out-to-right-full[data-state="closed"] {<br/>
+  --tw-exit-translate-x: 100%;<br/>
+}<br/>
+<br/>
+.data-\[state\=closed\]\:slide-out-to-top[data-state="closed"] {<br/>
+  --tw-exit-translate-y: -100%;<br/>
+}<br/>
+<br/>
+.data-\[state\=closed\]\:slide-out-to-top-\[48\%\][data-state="closed"] {<br/>
+  --tw-exit-translate-y: -48%;<br/>
+}<br/>
+<br/>
+.data-\[state\=open\]\:slide-in-from-bottom[data-state="open"] {<br/>
+  --tw-enter-translate-y: 100%;<br/>
+}<br/>
+<br/>
+.data-\[state\=open\]\:slide-in-from-left[data-state="open"] {<br/>
+  --tw-enter-translate-x: -100%;<br/>
+}<br/>
+<br/>
+.data-\[state\=open\]\:slide-in-from-left-1\/2[data-state="open"] {<br/>
+  --tw-enter-translate-x: -50%;<br/>
+}<br/>
+<br/>
+.data-\[state\=open\]\:slide-in-from-right[data-state="open"] {<br/>
+  --tw-enter-translate-x: 100%;<br/>
+}<br/>
+<br/>
+.data-\[state\=open\]\:slide-in-from-top[data-state="open"] {<br/>
+  --tw-enter-translate-y: -100%;<br/>
+}<br/>
+<br/>
+.data-\[state\=open\]\:slide-in-from-top-\[48\%\][data-state="open"] {<br/>
+  --tw-enter-translate-y: -48%;<br/>
+}<br/>
+<br/>
+.data-\[state\=open\]\:slide-in-from-top-full[data-state="open"] {<br/>
+  --tw-enter-translate-y: -100%;<br/>
+}<br/>
+<br/>
+.data-\[state\=closed\]\:duration-300[data-state="closed"] {<br/>
+  animation-duration: 300ms;<br/>
+}<br/>
+<br/>
+.data-\[state\=open\]\:duration-500[data-state="open"] {<br/>
+  animation-duration: 500ms;<br/>
+}<br/>
+<br/>
+@media (min-width: 640px) {<br/>
+<br/>
+  .sm\:bottom-0 {<br/>
+    bottom: 0px;<br/>
+  }<br/>
+<br/>
+  .sm\:right-0 {<br/>
+    right: 0px;<br/>
+  }<br/>
+<br/>
+  .sm\:top-auto {<br/>
+    top: auto;<br/>
+  }<br/>
+<br/>
+  .sm\:max-w-sm {<br/>
+    max-width: 24rem;<br/>
+  }<br/>
+<br/>
+  .sm\:flex-row {<br/>
+    flex-direction: row;<br/>
+  }<br/>
+<br/>
+  .sm\:flex-col {<br/>
+    flex-direction: column;<br/>
+  }<br/>
+<br/>
+  .sm\:justify-end {<br/>
+    justify-content: flex-end;<br/>
+  }<br/>
+<br/>
+  .sm\:space-x-2 &gt; :not([hidden]) ~ :not([hidden]) {<br/>
+    --tw-space-x-reverse: 0;<br/>
+    margin-right: calc(0.5rem * var(--tw-space-x-reverse));<br/>
+    margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));<br/>
+  }<br/>
+<br/>
+  .sm\:space-x-4 &gt; :not([hidden]) ~ :not([hidden]) {<br/>
+    --tw-space-x-reverse: 0;<br/>
+    margin-right: calc(1rem * var(--tw-space-x-reverse));<br/>
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));<br/>
+  }<br/>
+<br/>
+  .sm\:space-y-0 &gt; :not([hidden]) ~ :not([hidden]) {<br/>
+    --tw-space-y-reverse: 0;<br/>
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));<br/>
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));<br/>
+  }<br/>
+<br/>
+  .sm\:rounded-lg {<br/>
+    border-radius: var(--radius);<br/>
+  }<br/>
+<br/>
+  .sm\:text-left {<br/>
+    text-align: left;<br/>
+  }<br/>
+<br/>
+  .data-\[state\=open\]\:sm\:slide-in-from-bottom-full[data-state="open"] {<br/>
+    --tw-enter-translate-y: 100%;<br/>
+  }<br/>
+}<br/>
+<br/>
+@media (min-width: 768px) {<br/>
+<br/>
+  .md\:block {<br/>
+    display: block;<br/>
+  }<br/>
+<br/>
+  .md\:hidden {<br/>
+    display: none;<br/>
+  }<br/>
+<br/>
+  .md\:max-w-\[420px\] {<br/>
+    max-width: 420px;<br/>
+  }<br/>
+<br/>
+  .md\:flex-row {<br/>
+    flex-direction: row;<br/>
+  }<br/>
+}<br/>
+<br/>
+@media (min-width: 1024px) {<br/>
+<br/>
+  .lg\:w-32 {<br/>
+    width: 8rem;<br/>
+  }<br/>
+<br/>
+  .lg\:w-4\/5 {<br/>
+    width: 80%;<br/>
+  }<br/>
+<br/>
+  .lg\:w-auto {<br/>
+    width: auto;<br/>
+  }<br/>
+<br/>
+  .lg\:flex-row {<br/>
+    flex-direction: row;<br/>
+  }<br/>
+<br/>
+  .lg\:items-center {<br/>
+    align-items: center;<br/>
+  }<br/>
+<br/>
+  .lg\:text-3xl {<br/>
+    font-size: 1.875rem;<br/>
+    line-height: 2.25rem;<br/>
+  }<br/>
+<br/>
+  .lg\:text-base {<br/>
+    font-size: 1rem;<br/>
+    line-height: 1.5rem;<br/>
+  }<br/>
+}<br/>
+<br/>
+@media (min-width: 1280px) {<br/>
+<br/>
+  .xl\:block {<br/>
+    display: block;<br/>
+  }<br/>
+<br/>
+  .xl\:w-11\/12 {<br/>
+    width: 91.666667%;<br/>
+  }<br/>
+<br/>
+  .xl\:w-52 {<br/>
+    width: 13rem;<br/>
+  }<br/>
+<br/>
+  .xl\:w-auto {<br/>
+    width: auto;<br/>
+  }<br/>
+<br/>
+  .xl\:gap-10 {<br/>
+    gap: 2.5rem;<br/>
+  }<br/>
+<br/>
+  .xl\:pl-10 {<br/>
+    padding-left: 2.5rem;<br/>
+  }<br/>
+<br/>
+  .xl\:text-base {<br/>
+    font-size: 1rem;<br/>
+    line-height: 1.5rem;<br/>
+  }<br/>
+}<br/>
+<br/>
+.\[\&\+div\]\:text-xs+div {<br/>
+  font-size: 0.75rem;<br/>
+  line-height: 1rem;<br/>
+}<br/>
+<br/>
+.\[\&\:has\(\&gt;\.day-range-end\)\]\:rounded-r-md:has(&gt;.day-range-end) {<br/>
+  border-top-right-radius: calc(var(--radius) - 2px);<br/>
+  border-bottom-right-radius: calc(var(--radius) - 2px);<br/>
+}<br/>
+<br/>
+.\[\&\:has\(\&gt;\.day-range-start\)\]\:rounded-l-md:has(&gt;.day-range-start) {<br/>
+  border-top-left-radius: calc(var(--radius) - 2px);<br/>
+  border-bottom-left-radius: calc(var(--radius) - 2px);<br/>
+}<br/>
+<br/>
+.\[\&\:has\(\[aria-selected\]\)\]\:rounded-md:has([aria-selected]) {<br/>
+  border-radius: calc(var(--radius) - 2px);<br/>
+}<br/>
+<br/>
+.\[\&\:has\(\[aria-selected\]\)\]\:bg-accent:has([aria-selected]) {<br/>
+  background-color: hsl(var(--accent));<br/>
+}<br/>
+<br/>
+.first\:\[\&\:has\(\[aria-selected\]\)\]\:rounded-l-md:has([aria-selected]):first-child {<br/>
+  border-top-left-radius: calc(var(--radius) - 2px);<br/>
+  border-bottom-left-radius: calc(var(--radius) - 2px);<br/>
+}<br/>
+<br/>
+.last\:\[\&\:has\(\[aria-selected\]\)\]\:rounded-r-md:has([aria-selected]):last-child {<br/>
+  border-top-right-radius: calc(var(--radius) - 2px);<br/>
+  border-bottom-right-radius: calc(var(--radius) - 2px);<br/>
+}<br/>
+<br/>
+.\[\&\:has\(\[aria-selected\]\.day-outside\)\]\:bg-accent\/50:has([aria-selected].day-outside) {<br/>
+  background-color: hsl(var(--accent) / 0.5);<br/>
+}<br/>
+<br/>
+.\[\&\:has\(\[aria-selected\]\.day-range-end\)\]\:rounded-r-md:has([aria-selected].day-range-end) {<br/>
+  border-top-right-radius: calc(var(--radius) - 2px);<br/>
+  border-bottom-right-radius: calc(var(--radius) - 2px);<br/>
+}<br/>
+<br/>
+.\[\&_\[cmdk-group-heading\]\]\:px-2 [cmdk-group-heading] {<br/>
+  padding-left: 0.5rem;<br/>
+  padding-right: 0.5rem;<br/>
+}<br/>
+<br/>
+.\[\&_\[cmdk-group-heading\]\]\:py-1\.5 [cmdk-group-heading] {<br/>
+  padding-top: 0.375rem;<br/>
+  padding-bottom: 0.375rem;<br/>
+}<br/>
+<br/>
+.\[\&_\[cmdk-group-heading\]\]\:text-xs [cmdk-group-heading] {<br/>
+  font-size: 0.75rem;<br/>
+  line-height: 1rem;<br/>
+}<br/>
+<br/>
+.\[\&_\[cmdk-group-heading\]\]\:font-medium [cmdk-group-heading] {<br/>
+  font-weight: 500;<br/>
+}<br/>
+<br/>
+.\[\&_\[cmdk-group-heading\]\]\:text-muted-foreground [cmdk-group-heading] {<br/>
+  color: hsl(var(--muted-foreground));<br/>
+}<br/>
+<br/>
+.\[\&_\[cmdk-group\]\:not\(\[hidden\]\)_\~\[cmdk-group\]\]\:pt-0 [cmdk-group]:not([hidden]) ~[cmdk-group] {<br/>
+  padding-top: 0px;<br/>
+}<br/>
+<br/>
+.\[\&_\[cmdk-group\]\]\:px-2 [cmdk-group] {<br/>
+  padding-left: 0.5rem;<br/>
+  padding-right: 0.5rem;<br/>
+}<br/>
+<br/>
+.\[\&_\[cmdk-input-wrapper\]_svg\]\:h-5 [cmdk-input-wrapper] svg {<br/>
+  height: 1.25rem;<br/>
+}<br/>
+<br/>
+.\[\&_\[cmdk-input-wrapper\]_svg\]\:w-5 [cmdk-input-wrapper] svg {<br/>
+  width: 1.25rem;<br/>
+}<br/>
+<br/>
+.\[\&_\[cmdk-input\]\]\:h-12 [cmdk-input] {<br/>
+  height: 3rem;<br/>
+}<br/>
+<br/>
+.\[\&_\[cmdk-item\]\]\:px-2 [cmdk-item] {<br/>
+  padding-left: 0.5rem;<br/>
+  padding-right: 0.5rem;<br/>
+}<br/>
+<br/>
+.\[\&_\[cmdk-item\]\]\:py-3 [cmdk-item] {<br/>
+  padding-top: 0.75rem;<br/>
+  padding-bottom: 0.75rem;<br/>
+}<br/>
+<br/>
+.\[\&_\[cmdk-item\]_svg\]\:h-5 [cmdk-item] svg {<br/>
+  height: 1.25rem;<br/>
+}<br/>
+<br/>
+.\[\&_\[cmdk-item\]_svg\]\:w-5 [cmdk-item] svg {<br/>
+  width: 1.25rem;<br/>
+}<br/>
+<br/>
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvc3R5bGVzL2dsb2JhbHMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztDQUFjLENBQWQ7OztDQUFjOztBQUFkOzs7RUFBQSxzQkFBYyxFQUFkLE1BQWM7RUFBZCxlQUFjLEVBQWQsTUFBYztFQUFkLG1CQUFjLEVBQWQsTUFBYztFQUFkLHFCQUFjLEVBQWQsTUFBYztBQUFBOztBQUFkOztFQUFBLGdCQUFjO0FBQUE7O0FBQWQ7Ozs7Ozs7O0NBQWM7O0FBQWQ7O0VBQUEsZ0JBQWMsRUFBZCxNQUFjO0VBQWQsOEJBQWMsRUFBZCxNQUFjO0VBQWQsZ0JBQWMsRUFBZCxNQUFjO0VBQWQsV0FBYyxFQUFkLE1BQWM7RUFBZCwrSEFBYyxFQUFkLE1BQWM7RUFBZCw2QkFBYyxFQUFkLE1BQWM7RUFBZCwrQkFBYyxFQUFkLE1BQWM7RUFBZCx3Q0FBYyxFQUFkLE1BQWM7QUFBQTs7QUFBZDs7O0NBQWM7O0FBQWQ7RUFBQSxTQUFjLEVBQWQsTUFBYztFQUFkLG9CQUFjLEVBQWQsTUFBYztBQUFBOztBQUFkOzs7O0NBQWM7O0FBQWQ7RUFBQSxTQUFjLEVBQWQsTUFBYztFQUFkLGNBQWMsRUFBZCxNQUFjO0VBQWQscUJBQWMsRUFBZCxNQUFjO0FBQUE7O0FBQWQ7O0NBQWM7O0FBQWQ7RUFBQSxpQ0FBYztBQUFBOztBQUFkOztDQUFjOztBQUFkOzs7Ozs7RUFBQSxrQkFBYztFQUFkLG9CQUFjO0FBQUE7O0FBQWQ7O0NBQWM7O0FBQWQ7RUFBQSxjQUFjO0VBQWQsd0JBQWM7QUFBQTs7QUFBZDs7Q0FBYzs7QUFBZDs7RUFBQSxtQkFBYztBQUFBOztBQUFkOzs7OztDQUFjOztBQUFkOzs7O0VBQUEsK0dBQWMsRUFBZCxNQUFjO0VBQWQsNkJBQWMsRUFBZCxNQUFjO0VBQWQsK0JBQWMsRUFBZCxNQUFjO0VBQWQsY0FBYyxFQUFkLE1BQWM7QUFBQTs7QUFBZDs7Q0FBYzs7QUFBZDtFQUFBLGNBQWM7QUFBQTs7QUFBZDs7Q0FBYzs7QUFBZDs7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QUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBLHNCQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLHNCQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLHNCQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQSx1QkFBbUI7RUFBbkIsdURBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsdUJBQW1CO0VBQW5CLHNEQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLHVCQUFtQjtFQUFuQixvREFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSx1QkFBbUI7RUFBbkIsK0RBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsdUJBQW1CO0VBQW5CLGdFQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLHVCQUFtQjtFQUFuQiw4REFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFBQSx1QkFBbUI7RUFBbkIsNERBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBLHNCQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBLHNCQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUEsa0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBLGtCQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLGtCQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBLGtCQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBLG9CQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLHFCQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLGtCQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLGtCQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLG9CQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLHFCQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLG1CQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLG9CQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBLG1CQUFtQjtFQUFuQjtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQTtBQUFtQjtBQUFuQjtFQUFBO0FBQW1CO0FBQW5CO0VBQUEsaUJBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUEsa0JBQW1CO0VBQW5CO0FBQW1CO0FBQW5CO0VBQUE7QUFBbUI7QUFBbkI7RUFBQSxtQkFBbUI7RUFBbkI7QUFBbUI7QUFBbkI7RUFB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QTVFQTtFQUFBLDJHQTRFQTtFQTVFQSx5R0E0RUE7RUE1RUE7QUE0RUE7O0FBNUVBO0VBQUEsMkdBNEVBO0VBNUVBLHlHQTRFQTtFQTVFQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQSw4QkE0RUE7RUE1RUE7QUE0RUE7O0FBNUVBO0VBQUEsMkdBNEVBO0VBNUVBLHlHQTRFQTtFQTVFQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQSxvQkE0RUE7RUE1RUE7QUE0RUE7O0FBNUVBO0VBQUE7QUE0RUE7O0FBNUVBO0VBQUE7QUE0RUE7O0FBNUVBO0VBQUE7QUE0RUE7O0FBNUVBO0VBQUEsb0JBNEVBO0VBNUVBO0FBNEVBOztBQTVFQTtFQUFBO0FBNEVBOztBQTVFQTtFQUFBLG9CQTRFQTtFQTVFQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQSxxQkE0RUE7RUE1RUE7QUE0RUE7O0FBNUVBO0VBQUEsZ0RBNEVBO0VBNUVBO0FBNEVBOztBQTVFQTtFQUFBLGlEQTRFQTtFQTVFQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQSxxQkE0RUE7RUE1RUEseUJBNEVBO0VBNUVBLDJCQTRFQTtFQTVFQSx5QkE0RUE7RUE1RUEsMEJBNEVBO0VBNUVBLCtCQTRFQTtFQTVFQTtBQTRFQTs7QUE1RUE7RUFBQSxvQkE0RUE7RUE1RUEseUJBNEVBO0VBNUVBLDBCQTRFQTtFQTVFQSx3QkE0RUE7RUE1RUEseUJBNEVBO0VBNUVBLDhCQTRFQTtFQTVFQTtBQTRFQTs7QUE1RUE7RUFBQSxvQkE0RUE7RUE1RUEseUJBNEVBO0VBNUVBLDBCQTRFQTtFQTVFQSx3QkE0RUE7RUE1RUEseUJBNEVBO0VBNUVBLDhCQTRFQTtFQTVFQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7O0VBQUE7SUFBQTtFQTRFQTs7RUE1RUE7SUFBQTtFQTRFQTs7RUE1RUE7SUFBQTtFQTRFQTs7RUE1RUE7SUFBQTtFQTRFQTs7RUE1RUE7SUFBQTtFQTRFQTs7RUE1RUE7SUFBQTtFQTRFQTs7RUE1RUE7SUFBQTtFQTRFQTs7RUE1RUE7SUFBQSx1QkE0RUE7SUE1RUEsc0RBNEVBO0lBNUVBO0VBNEVBOztFQTVFQTtJQUFBLHVCQTRFQTtJQTVFQSxvREE0RUE7SUE1RUE7RUE0RUE7O0VBNUVBO0lBQUEsdUJBNEVBO0lBNUVBLDJEQTRFQTtJQTVFQTtFQTRFQTs7RUE1RUE7SUFBQTtFQTRFQTs7RUE1RUE7SUFBQTtFQTRFQTs7RUE1RUE7SUFBQTtFQTRFQTtBQUFBOztBQTVFQTs7RUFBQTtJQUFBO0VBNEVBOztFQTVFQTtJQUFBO0VBNEVBOztFQTVFQTtJQUFBO0VBNEVBOztFQTVFQTtJQUFBO0VBNEVBO0FBQUE7O0FBNUVBOztFQUFBO0lBQUE7RUE0RUE7O0VBNUVBO0lBQUE7RUE0RUE7O0VBNUVBO0lBQUE7RUE0RUE7O0VBNUVBO0lBQUE7RUE0RUE7O0VBNUVBO0lBQUE7RUE0RUE7O0VBNUVBO0lBQUEsbUJBNEVBO0lBNUVBO0VBNEVBOztFQTVFQTtJQUFBLGVBNEVBO0lBNUVBO0VBNEVBO0FBQUE7O0FBNUVBOztFQUFBO0lBQUE7RUE0RUE7O0VBNUVBO0lBQUE7RUE0RUE7O0VBNUVBO0lBQUE7RUE0RUE7O0VBNUVBO0lBQUE7RUE0RUE7O0VBNUVBO0lBQUE7RUE0RUE7O0VBNUVBO0lBQUE7RUE0RUE7O0VBNUVBO0lBQUEsZUE0RUE7SUE1RUE7RUE0RUE7QUFBQTs7QUE1RUE7RUFBQSxrQkE0RUE7RUE1RUE7QUE0RUE7O0FBNUVBO0VBQUEsa0RBNEVBO0VBNUVBO0FBNEVBOztBQTVFQTtFQUFBLGlEQTRFQTtFQTVFQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQSxpREE0RUE7RUE1RUE7QUE0RUE7O0FBNUVBO0VBQUEsa0RBNEVBO0VBNUVBO0FBNEVBOztBQTVFQTtFQUFBO0FBNEVBOztBQTVFQTtFQUFBLGtEQTRFQTtFQTVFQTtBQTRFQTs7QUE1RUE7RUFBQSxvQkE0RUE7RUE1RUE7QUE0RUE7O0FBNUVBO0VBQUEscUJBNEVBO0VBNUVBO0FBNEVBOztBQTVFQTtFQUFBLGtCQTRFQTtFQTVFQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQSxvQkE0RUE7RUE1RUE7QUE0RUE7O0FBNUVBO0VBQUE7QUE0RUE7O0FBNUVBO0VBQUE7QUE0RUE7O0FBNUVBO0VBQUE7QUE0RUE7O0FBNUVBO0VBQUEsb0JBNEVBO0VBNUVBO0FBNEVBOztBQTVFQTtFQUFBLG9CQTRFQTtFQTVFQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQTs7QUE1RUE7RUFBQTtBQTRFQSIsInNvdXJjZXNDb250ZW50IjpbIkB0YWlsd2luZCBiYXNlO1xuQHRhaWx3aW5kIGNvbXBvbmVudHM7XG5AdGFpbHdpbmQgdXRpbGl0aWVzO1xuXG5AbGF5ZXIgdXRpbGl0aWVzIHtcbiAgLnRleHQtYmFsYW5jZSB7XG4gICAgdGV4dC13cmFwOiBiYWxhbmNlO1xuICB9XG59XG5cblxuQGxheWVyIGJhc2Uge1xuICA6cm9vdCB7XG4gICAgLS1iYWNrZ3JvdW5kOiAwIDAlIDEwMCU7XG4gICAgLS1mb3JlZ3JvdW5kOiAyMjIuMiA4NCUgNC45JTtcbiAgICAtLWNhcmQ6IDIxMi43MjcgMjclIDg0JTtcbiAgICAtLWNhcmQtZm9yZWdyb3VuZDogMjIyLjIgODQlIDQuOSU7XG4gICAgLS1wb3BvdmVyOiAwIDAlIDEwMCU7XG4gICAgLS1wb3BvdmVyLWZvcmVncm91bmQ6IDIyMi4yIDg0JSA0LjklO1xuICAgIC0tcHJpbWFyeTogMTk2LjIyNSAxMDAlIDQ2JTtcbiAgICAtLXByaW1hcnktZm9yZWdyb3VuZDogMjEwIDQwJSA5OCU7XG4gICAgLS1zZWNvbmRhcnk6IDIxMCA0MCUgOTYuMSU7XG4gICAgLS1zZWNvbmRhcnktZm9yZWdyb3VuZDogMjIyLjIgNDcuNCUgMTEuMiU7XG4gICAgLS1tdXRlZDogMjEwIDQwJSA5Ni4xJTtcbiAgICAtLW11dGVkLWZvcmVncm91bmQ6IDIxNS40IDE2LjMlIDQ2LjklO1xuICAgIC0tYWNjZW50OiAyMTAgNDAlIDk2LjElO1xuICAgIC0tYWNjZW50LWZvcmVncm91bmQ6IDIyMi4yIDQ3LjQlIDExLjIlO1xuICAgIC0tZGVzdHJ1Y3RpdmU6IDAgODQuMiUgNjAuMiU7XG4gICAgLS1kZXN0cnVjdGl2ZS1mb3JlZ3JvdW5kOiAyMTAgNDAlIDk4JTtcbiAgICAtLWJvcmRlcjogMjE0LjMgMzEuOCUgOTEuNCU7XG4gICAgLS1pbnB1dDogMjE0LjMgMSUgOTIlO1xuICAgIC0tcmluZzogMjIxLjIgODMuMiUgNTMuMyU7XG4gICAgLS1yYWRpdXM6IDAuNXJlbTtcbiAgICAtLWNoYXJ0LTE6IDEyIDc2JSA2MSU7XG4gICAgLS1jaGFydC0yOiAxNzMgNTglIDM5JTtcbiAgICAtLWNoYXJ0LTM6IDE5NyAzNyUgMjQlO1xuICAgIC0tY2hhcnQtNDogNDMgNzQlIDY2JTtcbiAgICAtLWNoYXJ0LTU6IDAgMyUgNzAlO1xuICB9XG5cbiAgLmRhcmsge1xuICAgIC0tYmFja2dyb3VuZDogMjIyLjIgODQlIDQuOSU7XG4gICAgLS1mb3JlZ3JvdW5kOiAyMTAgNDAlIDk4JTtcbiAgICAtLWNhcmQ6IDIyMi4yIDg0JSA0LjklO1xuICAgIC0tY2FyZC1mb3JlZ3JvdW5kOiAyMTAgNDAlIDk4JTtcbiAgICAtLXBvcG92ZXI6IDIyMi4yIDg0JSA0LjklO1xuICAgIC0tcG9wb3Zlci1mb3JlZ3JvdW5kOiAyMTAgNDAlIDk4JTtcbiAgICAtLXByaW1hcnk6IDIxNy4yIDkxLjIlIDU5LjglO1xuICAgIC0tcHJpbWFyeS1mb3JlZ3JvdW5kOiAyMjIuMiA0Ny40JSAxMS4yJTtcbiAgICAtLXNlY29uZGFyeTogMjE3LjIgMzIuNiUgMTcuNSU7XG4gICAgLS1zZWNvbmRhcnktZm9yZWdyb3VuZDogMjEwIDQwJSA5OCU7XG4gICAgLS1tdXRlZDogMjE3LjIgMzIuNiUgMTcuNSU7XG4gICAgLS1tdXRlZC1mb3JlZ3JvdW5kOiAyMTUgMjAuMiUgNjUuMSU7XG4gICAgLS1hY2NlbnQ6IDIxNy4yIDMyLjYlIDE3LjUlO1xuICAgIC0tYWNjZW50LWZvcmVncm91bmQ6IDIxMCA0MCUgOTglO1xuICAgIC0tZGVzdHJ1Y3RpdmU6IDAgNjIuOCUgMzAuNiU7XG4gICAgLS1kZXN0cnVjdGl2ZS1mb3JlZ3JvdW5kOiAyMTAgNDAlIDk4JTtcbiAgICAtLWJvcmRlcjogMjE3LjIgMzIuNiUgMTcuNSU7XG4gICAgLS1pbnB1dDogMjE3LjIgMzIuNiUgMTcuNSU7XG4gICAgLS1yaW5nOiAyMjQuMyA3Ni4zJSA0OCU7XG4gICAgLS1jaGFydC0xOiAyMjAgNzAlIDUwJTtcbiAgICAtLWNoYXJ0LTI6IDE2MCA2MCUgNDUlO1xuICAgIC0tY2hhcnQtMzogMzAgODAlIDU1JTtcbiAgICAtLWNoYXJ0LTQ6IDI4MCA2NSUgNjAlO1xuICAgIC0tY2hhcnQtNTogMzQwIDc1JSA1NSU7XG4gIH1cbn1cblxuQGxheWVyIGJhc2Uge1xuICAqIHtcbiAgICBAYXBwbHkgYm9yZGVyLWJvcmRlcjtcbiAgfVxuICBib2R5IHtcbiAgICBAYXBwbHkgYmctYmFja2dyb3VuZCB0ZXh0LWZvcmVncm91bmQ7XG4gIH1cbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */&lt;/style&gt;<br/>
+  &lt;noscript id="__next_css__DO_NOT_USE__"&gt;&lt;/noscript&gt;<br/>
+ &lt;/head&gt;<br/>
+ &lt;body class="antialiased"&gt;<br/>
+  &lt;div id="__next"&gt;<br/>
+   &lt;div class="w-full"&gt;<br/>
+    &lt;div class="flex justify-between max-h-24 items-center p-3 border-b-2 border-chart-5 shadow-sm"&gt;<br/>
+     &lt;div class="block md:hidden"&gt;<br/>
+      &lt;button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:Ram:" data-state="closed"&gt;<br/>
+       &lt;svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-align-justify cursor-pointer text-primary rounded-full p-1"&gt;<br/>
+        &lt;line x1="3" x2="21" y1="6" y2="6"&gt;&lt;/line&gt;&lt;line x1="3" x2="21" y1="12" y2="12"&gt;&lt;/line&gt;&lt;line x1="3" x2="21" y1="18" y2="18"&gt;&lt;/line&gt;<br/>
+       &lt;/svg&gt;&lt;/button&gt;<br/>
+     &lt;/div&gt;<br/>
+     &lt;div class="flex items-center gap-2 lg:w-auto"&gt;<br/>
+      &lt;img alt="logo" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" style="color:transparent" srcset="/_next/image?url=%2Ftravel-icon.png&amp;w=64&amp;q=75 1x, /_next/image?url=%2Ftravel-icon.png&amp;w=128&amp;q=75 2x" src="/_next/image?url=%2Ftravel-icon.png&amp;w=128&amp;q=75"&gt;<br/>
+      &lt;h1 class="text-2xl lg:text-3xl font-bold text-primary w-40 xl:w-auto"&gt;Singapur Airlines&lt;/h1&gt;<br/>
+     &lt;/div&gt;<br/>
+     &lt;div class="hidden md:block p-5"&gt;<br/>
+      &lt;div class="flex flex-col md:flex-row gap-10 font-semibold text-sm lg:text-base justify-center items-center"&gt;<br/>
+       &lt;div&gt;<br/>
+        &lt;a class="hover:border-b-2 hover:border-black flex" href="/"&gt;Home&lt;/a&gt;<br/>
+       &lt;/div&gt;<br/>
+       &lt;div&gt;<br/>
+        &lt;a class="hover:border-b-2 hover:border-black flex" href="/BusquedaDeVuelosA/search?origin=MDE&amp;destination=BOG&amp;departureDate=2025-01-01&amp;returnDate=2025-01-10&amp;passengers=1&amp;tripType=roundTrip#"&gt;Ofertas y destinos&lt;/a&gt;<br/>
+       &lt;/div&gt;<br/>
+       &lt;div&gt;<br/>
+        &lt;a class="hover:border-b-2 hover:border-black flex" href="/BusquedaDeVuelosA/search?origin=MDE&amp;destination=BOG&amp;departureDate=2025-01-01&amp;returnDate=2025-01-10&amp;passengers=1&amp;tripType=roundTrip#"&gt;Tu reserva&lt;/a&gt;<br/>
+       &lt;/div&gt;<br/>
+       &lt;div&gt;<br/>
+        &lt;a class="hover:border-b-2 hover:border-black flex" href="/BusquedaDeVuelosA/search?origin=MDE&amp;destination=BOG&amp;departureDate=2025-01-01&amp;returnDate=2025-01-10&amp;passengers=1&amp;tripType=roundTrip#"&gt;Check-in&lt;/a&gt;<br/>
+       &lt;/div&gt;<br/>
+       &lt;div&gt;<br/>
+        &lt;a class="hover:border-b-2 hover:border-black flex" href="/BusquedaDeVuelosA"&gt;Información&lt;/a&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+     &lt;/div&gt;<br/>
+     &lt;div class="flex gap-5"&gt;<br/>
+      &lt;div class="flex justify-center items-center gap-2"&gt;<br/>
+       &lt;span class="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full"&gt;&lt;img class="aspect-square h-full w-full" src="https://github.com/shadcn.png"&gt;&lt;/span&gt;<br/>
+       &lt;p class="flex flex-col"&gt;Argenis Medina Morales &lt;span class="text-orange-400 -mt-1"&gt;administrador&lt;/span&gt;&lt;/p&gt;<br/>
+      &lt;/div&gt;&lt;a href="/"&gt;<br/>
+       &lt;svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out cursor-pointer bg-black text-white rounded-full p-2"&gt;<br/>
+        &lt;path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"&gt;&lt;/path&gt;&lt;polyline points="16 17 21 12 16 7"&gt;&lt;/polyline&gt;&lt;line x1="21" x2="9" y1="12" y2="12"&gt;&lt;/line&gt;<br/>
+       &lt;/svg&gt;&lt;/a&gt;<br/>
+     &lt;/div&gt;<br/>
+    &lt;/div&gt;<br/>
+   &lt;/div&gt;<br/>
+   &lt;div class="flex flex-col gap-5 justify-center items-center mt-10"&gt;<br/>
+    &lt;form class="flex w-auto xl:w-11/12 p-4 rounded-lg shadow-md border justify-around items-center gap-3"&gt;<br/>
+     &lt;div role="radiogroup" aria-required="false" dir="ltr" class="gap-2 flex space-x-4" tabindex="0" style="outline: none;"&gt;<br/>
+      &lt;div class="flex items-center space-x-2"&gt;<br/>
+       &lt;button type="button" role="radio" aria-checked="true" data-state="checked" value="roundTrip" class="aspect-square h-4 w-4 rounded-full border border-border text-primary shadow focus:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50" id="roundTrip" tabindex="-1" data-radix-collection-item=""&gt;&lt;span data-state="checked" class="flex items-center justify-center"&gt;<br/>
+         &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle h-3.5 w-3.5 p-[1px] fill-black text-black"&gt;<br/>
+          &lt;circle cx="12" cy="12" r="10"&gt;&lt;/circle&gt;<br/>
+         &lt;/svg&gt;&lt;/span&gt;&lt;/button&gt;&lt;input type="radio" aria-hidden="true" tabindex="-1" value="roundTrip" checked style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px; width: 16px; height: 16px;"&gt;&lt;label for="roundTrip" class="text-sm xl:text-base"&gt; Ida y vuelta &lt;/label&gt;<br/>
+      &lt;/div&gt;<br/>
+      &lt;div class="flex items-center space-x-2"&gt;<br/>
+       &lt;button type="button" role="radio" aria-checked="false" data-state="unchecked" value="oneWay" class="aspect-square h-4 w-4 rounded-full border border-border text-primary shadow focus:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50" id="oneWay" tabindex="-1" data-radix-collection-item=""&gt;&lt;/button&gt;&lt;input type="radio" aria-hidden="true" tabindex="-1" value="oneWay" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px; width: 16px; height: 16px;"&gt;&lt;label for="oneWay" class="text-sm xl:text-base"&gt; Solo ida &lt;/label&gt;<br/>
+      &lt;/div&gt;<br/>
+     &lt;/div&gt;<br/>
+     &lt;div class="flex gap-3 xl:gap-10"&gt;<br/>
+      &lt;div class="flex w-full max-w-sm justify-center items-center gap-3 xl:gap-10"&gt;<br/>
+       &lt;div class="relative flex flex-col justify-center items-center gap-1.5" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:r1r:" data-state="closed"&gt;<br/>
+        &lt;label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="origin"&gt;Origen&lt;/label&gt;&lt;button class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2 bg-input xl:pl-10 text-sm xl:text-base" type="button"&gt;Bogota (BOG)<br/>
+         &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevrons-up-down ml-2 h-4 w-4 shrink-0 opacity-50"&gt;<br/>
+          &lt;path d="m7 15 5 5 5-5"&gt;&lt;/path&gt;&lt;path d="m7 9 5-5 5 5"&gt;&lt;/path&gt;<br/>
+         &lt;/svg&gt;&lt;/button&gt;&lt;span class="absolute hidden xl:block left-2 top-1/2"&gt;<br/>
+         &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plane-takeoff"&gt;<br/>
+          &lt;path d="M2 22h20"&gt;&lt;/path&gt;&lt;path d="M6.36 17.4 4 17l-2-4 1.1-.55a2 2 0 0 1 1.8 0l.17.1a2 2 0 0 0 1.8 0L8 12 5 6l.9-.45a2 2 0 0 1 2.09.2l4.02 3a2 2 0 0 0 2.1.2l4.19-2.06a2.41 2.41 0 0 1 1.73-.17L21 7a1.4 1.4 0 0 1 .87 1.99l-.38.76c-.23.46-.6.84-1.07 1.08L7.58 17.2a2 2 0 0 1-1.22.18Z"&gt;&lt;/path&gt;<br/>
+         &lt;/svg&gt;&lt;/span&gt;<br/>
+       &lt;/div&gt;<br/>
+       &lt;div class="relative flex flex-col justify-center items-center gap-1.5" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:r1t:" data-state="closed"&gt;<br/>
+        &lt;label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="destination"&gt;Destino&lt;/label&gt;&lt;button class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2 bg-input xl:pl-10 text-sm xl:text-base" type="button"&gt;Medellin (MDE)<br/>
+         &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevrons-up-down ml-2 h-4 w-4 shrink-0 opacity-50"&gt;<br/>
+          &lt;path d="m7 15 5 5 5-5"&gt;&lt;/path&gt;&lt;path d="m7 9 5-5 5 5"&gt;&lt;/path&gt;<br/>
+         &lt;/svg&gt;&lt;/button&gt;&lt;span class="absolute hidden xl:block left-2 top-1/2"&gt;<br/>
+         &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plane-landing"&gt;<br/>
+          &lt;path d="M2 22h20"&gt;&lt;/path&gt;&lt;path d="M3.77 10.77 2 9l2-4.5 1.1.55c.55.28.9.84.9 1.45s.35 1.17.9 1.45L8 8.5l3-6 1.05.53a2 2 0 0 1 1.09 1.52l.72 5.4a2 2 0 0 0 1.09 1.52l4.4 2.2c.42.22.78.55 1.01.96l.6 1.03c.49.88-.06 1.98-1.06 2.1l-1.18.15c-.47.06-.95-.02-1.37-.24L4.29 11.15a2 2 0 0 1-.52-.38Z"&gt;&lt;/path&gt;<br/>
+         &lt;/svg&gt;&lt;/span&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+      &lt;div class="flex w-full max-w-sm items-center gap-1.5"&gt;<br/>
+       &lt;div class="flex flex-col items-center gap-1.5"&gt;<br/>
+        &lt;label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="Pasajeros"&gt;Pasajeros&lt;/label&gt;<br/>
+        &lt;div class="relative w-full"&gt;<br/>
+         &lt;input type="number" class="flex h-9 rounded-md border border-input px-3 py-1 shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-black focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 bg-input xl:pl-10 w-20 text-sm xl:text-base" placeholder="1"&gt;&lt;span class="absolute hidden xl:block left-2 top-1/2 transform -translate-y-1/2"&gt;<br/>
+          &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-plus"&gt;<br/>
+           &lt;path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"&gt;&lt;/path&gt;&lt;circle cx="9" cy="7" r="4"&gt;&lt;/circle&gt;&lt;line x1="19" x2="19" y1="8" y2="14"&gt;&lt;/line&gt;&lt;line x1="22" x2="16" y1="11" y2="11"&gt;&lt;/line&gt;<br/>
+          &lt;/svg&gt;&lt;/span&gt;<br/>
+        &lt;/div&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+      &lt;div class="flex gap-3 xl:gap-10" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:r1v:" data-state="closed"&gt;<br/>
+       &lt;div class="flex flex-col items-center gap-1.5"&gt;<br/>
+        &lt;label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="departureDate"&gt;Ida&lt;/label&gt;&lt;button class="items-center justify-center whitespace-nowrap font-medium disabled:pointer-events-none hover:bg-accent hover:text-accent-foreground flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 text-black" type="button"&gt;<br/>
+         &lt;svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4"&gt;<br/>
+          &lt;path d="M4.5 1C4.77614 1 5 1.22386 5 1.5V2H10V1.5C10 1.22386 10.2239 1 10.5 1C10.7761 1 11 1.22386 11 1.5V2H12.5C13.3284 2 14 2.67157 14 3.5V12.5C14 13.3284 13.3284 14 12.5 14H2.5C1.67157 14 1 13.3284 1 12.5V3.5C1 2.67157 1.67157 2 2.5 2H4V1.5C4 1.22386 4.22386 1 4.5 1ZM10 3V3.5C10 3.77614 10.2239 4 10.5 4C10.7761 4 11 3.77614 11 3.5V3H12.5C12.7761 3 13 3.22386 13 3.5V5H2V3.5C2 3.22386 2.22386 3 2.5 3H4V3.5C4 3.77614 4.22386 4 4.5 4C4.77614 4 5 3.77614 5 3.5V3H10ZM2 6V12.5C2 12.7761 2.22386 13 2.5 13H12.5C12.7761 13 13 12.7761 13 12.5V6H2ZM7 7.5C7 7.22386 7.22386 7 7.5 7C7.77614 7 8 7.22386 8 7.5C8 7.77614 7.77614 8 7.5 8C7.22386 8 7 7.77614 7 7.5ZM9.5 7C9.22386 7 9 7.22386 9 7.5C9 7.77614 9.22386 8 9.5 8C9.77614 8 10 7.77614 10 7.5C10 7.22386 9.77614 7 9.5 7ZM11 7.5C11 7.22386 11.2239 7 11.5 7C11.7761 7 12 7.22386 12 7.5C12 7.77614 11.7761 8 11.5 8C11.2239 8 11 7.77614 11 7.5ZM11.5 9C11.2239 9 11 9.22386 11 9.5C11 9.77614 11.2239 10 11.5 10C11.7761 10 12 9.77614 12 9.5C12 9.22386 11.7761 9 11.5 9ZM9 9.5C9 9.22386 9.22386 9 9.5 9C9.77614 9 10 9.22386 10 9.5C10 9.77614 9.77614 10 9.5 10C9.22386 10 9 9.77614 9 9.5ZM7.5 9C7.22386 9 7 9.22386 7 9.5C7 9.77614 7.22386 10 7.5 10C7.77614 10 8 9.77614 8 9.5C8 9.22386 7.77614 9 7.5 9ZM5 9.5C5 9.22386 5.22386 9 5.5 9C5.77614 9 6 9.22386 6 9.5C6 9.77614 5.77614 10 5.5 10C5.22386 10 5 9.77614 5 9.5ZM3.5 9C3.22386 9 3 9.22386 3 9.5C3 9.77614 3.22386 10 3.5 10C3.77614 10 4 9.77614 4 9.5C4 9.22386 3.77614 9 3.5 9ZM3 11.5C3 11.2239 3.22386 11 3.5 11C3.77614 11 4 11.2239 4 11.5C4 11.7761 3.77614 12 3.5 12C3.22386 12 3 11.7761 3 11.5ZM5.5 11C5.22386 11 5 11.2239 5 11.5C5 11.7761 5.22386 12 5.5 12C5.77614 12 6 11.7761 6 11.5C6 11.2239 5.77614 11 5.5 11ZM7 11.5C7 11.2239 7.22386 11 7.5 11C7.77614 11 8 11.2239 8 11.5C8 11.7761 7.77614 12 7.5 12C7.22386 12 7 11.7761 7 11.5ZM9.5 11C9.22386 11 9 11.2239 9 11.5C9 11.7761 9.22386 12 9.5 12C9.77614 12 10 11.7761 10 11.5C10 11.2239 9.77614 11 9.5 11Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"&gt;&lt;/path&gt;<br/>
+         &lt;/svg&gt;&lt;span&gt;Fecha ida&lt;/span&gt;&lt;/button&gt;<br/>
+       &lt;/div&gt;<br/>
+       &lt;div class="flex flex-col items-center gap-1.5"&gt;<br/>
+        &lt;label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="returnDate"&gt;Vuelta&lt;/label&gt;&lt;button class="items-center justify-center whitespace-nowrap font-medium disabled:pointer-events-none hover:bg-accent hover:text-accent-foreground flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 text-black" type="button"&gt;<br/>
+         &lt;svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4"&gt;<br/>
+          &lt;path d="M4.5 1C4.77614 1 5 1.22386 5 1.5V2H10V1.5C10 1.22386 10.2239 1 10.5 1C10.7761 1 11 1.22386 11 1.5V2H12.5C13.3284 2 14 2.67157 14 3.5V12.5C14 13.3284 13.3284 14 12.5 14H2.5C1.67157 14 1 13.3284 1 12.5V3.5C1 2.67157 1.67157 2 2.5 2H4V1.5C4 1.22386 4.22386 1 4.5 1ZM10 3V3.5C10 3.77614 10.2239 4 10.5 4C10.7761 4 11 3.77614 11 3.5V3H12.5C12.7761 3 13 3.22386 13 3.5V5H2V3.5C2 3.22386 2.22386 3 2.5 3H4V3.5C4 3.77614 4.22386 4 4.5 4C4.77614 4 5 3.77614 5 3.5V3H10ZM2 6V12.5C2 12.7761 2.22386 13 2.5 13H12.5C12.7761 13 13 12.7761 13 12.5V6H2ZM7 7.5C7 7.22386 7.22386 7 7.5 7C7.77614 7 8 7.22386 8 7.5C8 7.77614 7.77614 8 7.5 8C7.22386 8 7 7.77614 7 7.5ZM9.5 7C9.22386 7 9 7.22386 9 7.5C9 7.77614 9.22386 8 9.5 8C9.77614 8 10 7.77614 10 7.5C10 7.22386 9.77614 7 9.5 7ZM11 7.5C11 7.22386 11.2239 7 11.5 7C11.7761 7 12 7.22386 12 7.5C12 7.77614 11.7761 8 11.5 8C11.2239 8 11 7.77614 11 7.5ZM11.5 9C11.2239 9 11 9.22386 11 9.5C11 9.77614 11.2239 10 11.5 10C11.7761 10 12 9.77614 12 9.5C12 9.22386 11.7761 9 11.5 9ZM9 9.5C9 9.22386 9.22386 9 9.5 9C9.77614 9 10 9.22386 10 9.5C10 9.77614 9.77614 10 9.5 10C9.22386 10 9 9.77614 9 9.5ZM7.5 9C7.22386 9 7 9.22386 7 9.5C7 9.77614 7.22386 10 7.5 10C7.77614 10 8 9.77614 8 9.5C8 9.22386 7.77614 9 7.5 9ZM5 9.5C5 9.22386 5.22386 9 5.5 9C5.77614 9 6 9.22386 6 9.5C6 9.77614 5.77614 10 5.5 10C5.22386 10 5 9.77614 5 9.5ZM3.5 9C3.22386 9 3 9.22386 3 9.5C3 9.77614 3.22386 10 3.5 10C3.77614 10 4 9.77614 4 9.5C4 9.22386 3.77614 9 3.5 9ZM3 11.5C3 11.2239 3.22386 11 3.5 11C3.77614 11 4 11.2239 4 11.5C4 11.7761 3.77614 12 3.5 12C3.22386 12 3 11.7761 3 11.5ZM5.5 11C5.22386 11 5 11.2239 5 11.5C5 11.7761 5.22386 12 5.5 12C5.77614 12 6 11.7761 6 11.5C6 11.2239 5.77614 11 5.5 11ZM7 11.5C7 11.2239 7.22386 11 7.5 11C7.77614 11 8 11.2239 8 11.5C8 11.7761 7.77614 12 7.5 12C7.22386 12 7 11.7761 7 11.5ZM9.5 11C9.22386 11 9 11.2239 9 11.5C9 11.7761 9.22386 12 9.5 12C9.77614 12 10 11.7761 10 11.5C10 11.2239 9.77614 11 9.5 11Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"&gt;&lt;/path&gt;<br/>
+         &lt;/svg&gt;&lt;span&gt;Fecha vuelta&lt;/span&gt;&lt;/button&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+     &lt;/div&gt;&lt;button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none shadow hover:bg-primary/90 bg-primary lg:w-32 xl:w-52 h-10 text-white rounded-2xl p-2 disabled:opacity-30" type="submit" disabled id="searchButton"&gt;Buscar&lt;/button&gt;<br/>
+    &lt;/form&gt;<br/>
+    &lt;div class="p-6 w-4/5"&gt;<br/>
+     &lt;div class="flex items-center gap-3 mb-6"&gt;<br/>
+      &lt;span class="text-xl font-bold"&gt;Salida de MDE a BOG - 2025-01-01&lt;/span&gt;<br/>
+     &lt;/div&gt;<br/>
+     &lt;div class="mb-4"&gt;<br/>
+      &lt;span class="font-semibold"&gt;Recomendado:&lt;/span&gt;&lt;button class="ml-4 bg-gray-200 px-4 py-2 rounded-full text-gray-400 font-medium"&gt;Vuelos directos&lt;/button&gt;&lt;button class="ml-4 bg-gray-200 px-4 py-2 rounded-full text-gray-400"&gt;Mejor precio&lt;/button&gt;<br/>
+     &lt;/div&gt;<br/>
+     &lt;div class="text-center text-gray-500 text-lg mt-10"&gt;<br/>
+      No hay vuelos disponibles para las fechas seleccionadas.<br/>
+     &lt;/div&gt;<br/>
+    &lt;/div&gt;<br/>
+   &lt;/div&gt;<br/>
+   &lt;div role="region" aria-label="Notifications (F8)" tabindex="-1" style=""&gt;<br/>
+    &lt;span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;"&gt;&lt;/span&gt;<br/>
+    &lt;ol tabindex="-1" class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"&gt;<br/>
+     &lt;li role="status" aria-live="off" aria-atomic="true" tabindex="0" data-state="open" data-swipe-direction="right" class="group pointer-events-auto relative flex w-full items-center justify-between space-x-2 overflow-hidden rounded-md border p-4 pr-6 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full bg-primary text-primary-foreground border-primary" data-radix-collection-item="" style="user-select: none; touch-action: none;"&gt;<br/>
+      &lt;div class="grid gap-1"&gt;<br/>
+       &lt;div class="text-sm font-semibold [&amp;+div]:text-xs"&gt;<br/>
+        ¡Listo!<br/>
+       &lt;/div&gt;<br/>
+       &lt;div class="text-sm opacity-90"&gt;<br/>
+        La fecha ha sido agregada correctamente.<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;&lt;button type="button" class="inline-flex h-8 shrink-0 items-center justify-center rounded-md border bg-transparent px-3 text-sm font-medium transition-colors hover:bg-secondary focus:outline-none focus:ring-1 focus:ring-ring disabled:pointer-events-none disabled:opacity-50 group-[.destructive]:border-muted/40 group-[.destructive]:hover:border-destructive/30 group-[.destructive]:hover:bg-destructive group-[.destructive]:hover:text-destructive-foreground group-[.destructive]:focus:ring-destructive" data-radix-toast-announce-exclude="" data-radix-toast-announce-alt="OK"&gt;OK&lt;/button&gt;&lt;button type="button" class="absolute right-1 top-1 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-100 focus:outline-none focus:ring-1 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600" toast-close="" data-radix-toast-announce-exclude=""&gt;<br/>
+       &lt;svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4"&gt;<br/>
+        &lt;path d="M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"&gt;&lt;/path&gt;<br/>
+       &lt;/svg&gt;&lt;/button&gt;&lt;/li&gt;<br/>
+    &lt;/ol&gt;&lt;span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;"&gt;&lt;/span&gt;<br/>
+   &lt;/div&gt;<br/>
+  &lt;/div&gt;<br/>
+  &lt;script src="/_next/static/chunks/react-refresh.js"&gt;&lt;/script&gt;<br/>
+  &lt;script id="__NEXT_DATA__" type="application/json"&gt;{"props":{"pageProps":{}},"page":"/BusquedaDeVuelosA","query":{},"buildId":"development","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}&lt;/script&gt;<br/>
+  &lt;div id="__next-build-watcher" style="position: fixed; bottom: 10px; right: 20px; width: 0px; height: 0px; z-index: 99999;"&gt;&lt;/div&gt;&lt;next-route-announcer&gt;<br/>
+   &lt;p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; top: 0px; width: 1px; white-space: nowrap; overflow-wrap: normal;"&gt;Singapur Airlines&lt;/p&gt;<br/>
+  &lt;/next-route-announcer&gt;<br/>
+  &lt;script src="/_next/static/chunks/pages/BusquedaDeVuelosA/search.js"&gt;&lt;/script&gt;<br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>

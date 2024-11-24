@@ -17,9 +17,9 @@ public class ElCalendario implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor) {
         if (campo.equalsIgnoreCase("ida")) {
-            return the(CALENDARIO_FECHA_IDA).answeredBy(actor).isCurrentlyVisible();
+            return the(CONTENEDOR_CALENDARIO).answeredBy(actor).isCurrentlyVisible();
         } else if (campo.equalsIgnoreCase("vuelta")) {
-            return the(CALENDARIO_FECHA_VUELTA).answeredBy(actor).isCurrentlyVisible();
+            return the(CONTENEDOR_CALENDARIO).answeredBy(actor).isCurrentlyVisible();
         }
         return false;
     }
