@@ -58,4 +58,7 @@ public class BusquedaVuelosPage extends PageObject {
     // VUELO ENCONTRADO
     public static final Target VUELO_DISPONIBLE = the("div con la información básica del vuelo encontrado")
             .located(By.xpath("/html/body/div[1]/div[2]/div/ul/li"));
+
+    public static final Target MENSAJE_NO_RESULTADOS = Target.the("mensaje de no hay resultados")
+            .locatedBy("//div[contains(text(),'No hay resultados')]");
 }

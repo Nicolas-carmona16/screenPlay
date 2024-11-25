@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">6</div>
+<div class="counter">8</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">13.431s</div>
+<div class="counter">15.790s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,32 +79,42 @@
 </thead>
 <tr>
 <td class="success">Búsqueda de vuelo no disponible</td>
-<td class="success">3.419s</td>
+<td class="success">3.484s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Búsqueda de vuelos disponibles</td>
-<td class="success">3.909s</td>
+<td class="success">4.000s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Destino no disponible</td>
+<td class="success">1.011s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Origen no disponible</td>
+<td class="success">0.978s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Selección de destino</td>
-<td class="success">0.914s</td>
+<td class="success">0.909s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Selección de la fecha ida de vuelo</td>
-<td class="success">0.818s</td>
+<td class="success">0.829s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Selección de la fecha vuelta de vuelo</td>
-<td class="success">0.822s</td>
+<td class="success">0.824s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Selección del origen</td>
-<td class="success">3.549s</td>
+<td class="success">3.755s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -122,9 +132,9 @@ Selección del origen(búsqueda-de-vuelos;selección-del-origen)
 --------------------------------------------------------------------------------
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \r\n                   --di..., --disable-default-apps, --disable-extensions-file-a..., \r\n                   --in..., --disable-infobars,--disabl..., --remote-allow-origins=*], extensions: []}}
-nov. 24, 2024 7:21:15 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+nov. 24, 2024 8:22:34 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 131
-nov. 24, 2024 7:21:15 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+nov. 24, 2024 8:22:34 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 131.0.6778.86. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO  - ?[92m
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
@@ -214,6 +224,38 @@ Búsqueda de vuelo no disponible(búsqueda-de-vuelos;búsqueda-de-vuelo-no-dispo
 
 Búsqueda de vuelo no disponible
 ----------------------------------------------------------------------?[0m
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Origen no disponible(búsqueda-de-vuelos;origen-no-disponible)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Origen no disponible
+----------------------------------------------------------------------?[0m
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Destino no disponible(búsqueda-de-vuelos;destino-no-disponible)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Destino no disponible
+----------------------------------------------------------------------?[0m
 </pre>
 </span>
 </div>
@@ -225,7 +267,7 @@ Búsqueda de vuelo no disponible
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.2</a> at 24/11/2024, 7:21:27 p. m.</p>
+<a href="http://www.gradle.org">Gradle 8.2</a> at 24/11/2024, 8:22:48 p. m.</p>
 </div>
 </div>
 </body>

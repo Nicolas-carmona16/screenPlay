@@ -1,14 +1,8 @@
 package co.com.udea.certificacion.busquedavuelosa.stepdefinitions;
 
 import co.com.udea.certificacion.busquedavuelosa.models.BusquedaDeVuelos;
-import co.com.udea.certificacion.busquedavuelosa.questions.ElCalendario;
-import co.com.udea.certificacion.busquedavuelosa.questions.ElDesplegable;
-import co.com.udea.certificacion.busquedavuelosa.questions.MensajeNoVuelos;
-import co.com.udea.certificacion.busquedavuelosa.questions.VuelosDisponibles;
-import co.com.udea.certificacion.busquedavuelosa.tasks.AbrirPagina;
-import co.com.udea.certificacion.busquedavuelosa.tasks.BuscarVuelos;
-import co.com.udea.certificacion.busquedavuelosa.tasks.SeleccionarCampo;
-import co.com.udea.certificacion.busquedavuelosa.tasks.SeleccionarCampos;
+import co.com.udea.certificacion.busquedavuelosa.questions.*;
+import co.com.udea.certificacion.busquedavuelosa.tasks.*;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -109,6 +103,29 @@ public class BusquedaVuelosStepDefinitions {
     public void seObtienenElMensaje(String mensajeEsperado) {
         usuario.should(
                 seeThat(MensajeNoVuelos.esVisible(mensajeEsperado), is(true))
+        );
+    }
+
+    @When("selecciono origen {string}")
+    public void seleccionoOrigen(String origen) {
+        BusquedaDeVuelos busquedaDeVuelos = new BusquedaDeVuelos(origen, "", "", "");
+        usuario.attemptsTo(
+                SeleccionarOrigen.con(busquedaDeVuelos)
+        );
+    }
+
+    @When("selecciono destino {string}")
+    public void seleccionoDestino(String destino) {
+        BusquedaDeVuelos busquedaDeVuelos = new BusquedaDeVuelos("", destino, "", "");
+        usuario.attemptsTo(
+                SeleccionarDestino.con(busquedaDeVuelos)
+        );
+    }
+
+    @Then("se muestra el mensaje no disponible")
+    public void seMuestraElMensajeNoDisponible() {
+        usuario.should(
+                seeThat(MensajeNoResultados.esVisible(), is(true))
         );
     }
 }

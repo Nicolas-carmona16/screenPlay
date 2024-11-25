@@ -31,3 +31,13 @@ Feature: Búsqueda de vuelos
     And selecciono origen "Barranquilla" destino "Bogota" fecha ida "2024-12-16" y fecha vuelta "2024-12-20"
     When doy click en el boton buscar
     Then se obtienen el mensaje "No hay vuelos disponibles para las fechas seleccionadas."
+
+  Scenario: Origen no disponible
+    Given que estoy en la pagina de busqueda de vuelos
+    When selecciono origen "Monteria"
+    Then se muestra el mensaje no disponible
+
+  Scenario: Destino no disponible
+    Given que estoy en la pagina de busqueda de vuelos
+    When selecciono destino "Monteria"
+    Then se muestra el mensaje no disponible
