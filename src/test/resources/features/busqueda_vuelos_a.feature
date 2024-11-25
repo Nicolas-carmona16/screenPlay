@@ -41,3 +41,20 @@ Feature: Búsqueda de vuelos
     Given que estoy en la pagina de busqueda de vuelos
     When selecciono destino "Monteria"
     Then se muestra el mensaje no disponible
+
+  Scenario: Seleccionar el mismo origen y destino
+    Given que estoy en la pagina de busqueda de vuelos
+    And selecciono origen "Medellin"
+    When selecciono destino "Medellin"
+    Then se muestra el mensaje no disponible
+
+  Scenario: Seleccionar una fecha de ida anterior a la actual
+    Given que estoy en la pagina de busqueda de vuelos
+    When selecciono fecha de ida "2024-11-20"
+    Then se muestra el mensaje de error fecha ida "La fecha de salida no puede ser anterior a la fecha actual."
+
+  Scenario: Seleccionar una fecha de vuelta anterior a la de ida
+    Given que estoy en la pagina de busqueda de vuelos
+    And selecciono fecha de ida "2025-01-01"
+    When selecciono fecha de vuelta "2024-12-12"
+    Then se muestra el mensaje de error fecha vuelta "La fecha de regreso debe ser despues de la fecha de salida."

@@ -1,6 +1,50 @@
 package co.com.udea.certificacion.busquedavuelosa.utils;
 
+import net.serenitybdd.core.pages.ListOfWebElementFacades;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.actions.Click;
+import static co.com.udea.certificacion.busquedavuelosa.userinterfaces.BusquedaVuelosPage.*;
+
 public class DateUtils {
+
+    public static <T extends Actor> void seleccionarFecha(T actor, String fecha) {
+        String[] partesFecha = fecha.split("-");
+        String anio = partesFecha[0];
+        String mes = partesFecha[1];
+        String dia = partesFecha[2];
+
+        String mesEnIngles = obtenerNombreMes(mes);
+        String diaNormalizado = normalizarNumero(dia);
+
+        boolean mesCorrecto = false;
+
+        while (!mesCorrecto) {
+            String textoCalendario = CONTENEDOR_CALENDARIO.resolveFor(actor).getText();
+            if (textoCalendario.contains(mesEnIngles + " " + anio)) {
+                mesCorrecto = true;
+            } else {
+                actor.attemptsTo(
+                        Click.on(BOTON_SIGUIENTE_MES)
+                );
+            }
+        }
+        ListOfWebElementFacades diasVisibles = DIA_EN_CALENDARIO(diaNormalizado).resolveAllFor(actor);
+        if (diasVisibles.size() == 1) {
+            actor.attemptsTo(
+                    Click.on(diasVisibles.get(0))
+            );
+        } else if (diasVisibles.size() > 1) {
+            if (Integer.parseInt(diaNormalizado) < 15) {
+                actor.attemptsTo(
+                        Click.on(diasVisibles.get(0))
+                );
+            } else {
+                actor.attemptsTo(
+                        Click.on(diasVisibles.get(1))
+                );
+            }
+        }
+    }
 
     public static String obtenerNombreMes(String mes) {
         switch (mes) {

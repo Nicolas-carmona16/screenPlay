@@ -128,4 +128,34 @@ public class BusquedaVuelosStepDefinitions {
                 seeThat(MensajeNoResultados.esVisible(), is(true))
         );
     }
+
+    @When("selecciono fecha de ida {string}")
+    public void seleccionoFechaDeIda(String fechaIda) {
+        BusquedaDeVuelos busquedaDeVuelos = new BusquedaDeVuelos("", "", fechaIda, "");
+        usuario.attemptsTo(
+                SeleccionarFechaIda.con(busquedaDeVuelos)
+        );
+    }
+
+    @When("selecciono fecha de vuelta {string}")
+    public void seleccionoFechaDeVuelta(String fechaVuelta) {
+        BusquedaDeVuelos busquedaDeVuelos = new BusquedaDeVuelos("", "", "", fechaVuelta);
+        usuario.attemptsTo(
+                SeleccionarFechaVuelta.con(busquedaDeVuelos)
+        );
+    }
+
+    @Then("se muestra el mensaje de error fecha ida {string}")
+    public void seMuestraElMensajeDeErrorFechaIda(String mensajeEsperado) {
+        usuario.should(
+                seeThat(MensajeErrorFechaIda.esVisible(mensajeEsperado), is(true))
+        );
+    }
+
+    @Then("se muestra el mensaje de error fecha vuelta {string}")
+    public void seMuestraElMensajeDeErrorFechaVuelta(String mensajeEsperado) {
+        usuario.should(
+                seeThat(MensajeErrorFechaVuelta.esVisible(mensajeEsperado), is(true))
+        );
+    }
 }

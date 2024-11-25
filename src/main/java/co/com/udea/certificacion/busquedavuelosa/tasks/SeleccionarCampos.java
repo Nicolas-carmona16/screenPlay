@@ -42,57 +42,15 @@ public class SeleccionarCampos implements Task {
 
         // Fecha ida
         actor.attemptsTo(
-                Click.on(INPUT_FECHA_IDA) // Abre el calendario
+                Click.on(INPUT_FECHA_IDA)
         );
-        seleccionarFecha(actor, busquedaDeVuelos.getFechaIda());
+        DateUtils.seleccionarFecha(actor, busquedaDeVuelos.getFechaIda());
 
         // Fecha vuelta
         actor.attemptsTo(
-                DoubleClick.on(INPUT_FECHA_VUELTA) // Abre el calendario
+                DoubleClick.on(INPUT_FECHA_VUELTA)
         );
-        seleccionarFecha(actor, busquedaDeVuelos.getFechaVuelta());
-    }
-
-    private <T extends Actor> void seleccionarFecha(T actor, String fecha) {
-        String[] partesFecha = fecha.split("-");
-        String anio = partesFecha[0];
-        String mes = partesFecha[1];
-        String dia = partesFecha[2];
-
-        String mesEnIngles = DateUtils.obtenerNombreMes(mes);
-        String diaNormalizado = DateUtils.normalizarNumero(dia);
-
-        boolean mesCorrecto = false;
-
-        while (!mesCorrecto) {
-            String textoCalendario = CONTENEDOR_CALENDARIO.resolveFor(actor).getText();
-            if (textoCalendario.contains(mesEnIngles + " " + anio)) {
-                mesCorrecto = true;
-            } else {
-                actor.attemptsTo(
-                        Click.on(BOTON_SIGUIENTE_MES)
-                );
-            }
-        }
-        ListOfWebElementFacades diasVisibles = DIA_EN_CALENDARIO(diaNormalizado).resolveAllFor(actor);
-        if (diasVisibles.size() == 1) {
-            actor.attemptsTo(
-                    Click.on(diasVisibles.get(0))
-            );
-        } else if (diasVisibles.size() > 1) {
-            if (Integer.parseInt(diaNormalizado) < 15) {
-                actor.attemptsTo(
-                        Click.on(diasVisibles.get(0))
-                );
-            } else {
-                actor.attemptsTo(
-                        Click.on(diasVisibles.get(1))
-                );
-            }
-        }
-        actor.attemptsTo(
-                Click.on(DIA_EN_CALENDARIO(diaNormalizado))
-        );
+        DateUtils.seleccionarFecha(actor, busquedaDeVuelos.getFechaVuelta());
     }
 
     public static SeleccionarCampos conDatos(BusquedaDeVuelos busquedaDeVuelos) {

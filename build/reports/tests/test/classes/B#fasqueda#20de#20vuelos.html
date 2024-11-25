@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">8</div>
+<div class="counter">11</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">15.790s</div>
+<div class="counter">19.512s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,42 +79,57 @@
 </thead>
 <tr>
 <td class="success">Búsqueda de vuelo no disponible</td>
-<td class="success">3.484s</td>
+<td class="success">3.138s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Búsqueda de vuelos disponibles</td>
-<td class="success">4.000s</td>
+<td class="success">3.511s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Destino no disponible</td>
-<td class="success">1.011s</td>
+<td class="success">0.885s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Origen no disponible</td>
-<td class="success">0.978s</td>
+<td class="success">0.970s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Seleccionar el mismo origen y destino</td>
+<td class="success">1.309s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Seleccionar una fecha de ida anterior a la actual</td>
+<td class="success">1.233s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Seleccionar una fecha de vuelta anterior a la de ida</td>
+<td class="success">2.179s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Selección de destino</td>
-<td class="success">0.909s</td>
+<td class="success">0.907s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Selección de la fecha ida de vuelo</td>
-<td class="success">0.829s</td>
+<td class="success">0.921s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Selección de la fecha vuelta de vuelo</td>
-<td class="success">0.824s</td>
+<td class="success">0.895s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Selección del origen</td>
-<td class="success">3.755s</td>
+<td class="success">3.564s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -132,9 +147,9 @@ Selección del origen(búsqueda-de-vuelos;selección-del-origen)
 --------------------------------------------------------------------------------
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \r\n                   --di..., --disable-default-apps, --disable-extensions-file-a..., \r\n                   --in..., --disable-infobars,--disabl..., --remote-allow-origins=*], extensions: []}}
-nov. 24, 2024 8:22:34 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+nov. 24, 2024 9:33:04 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 131
-nov. 24, 2024 8:22:34 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+nov. 24, 2024 9:33:04 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 131.0.6778.86. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO  - ?[92m
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
@@ -256,6 +271,54 @@ Destino no disponible(búsqueda-de-vuelos;destino-no-disponible)
 
 Destino no disponible
 ----------------------------------------------------------------------?[0m
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Seleccionar el mismo origen y destino(búsqueda-de-vuelos;seleccionar-el-mismo-origen-y-destino)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Seleccionar el mismo origen y destino
+----------------------------------------------------------------------?[0m
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Seleccionar una fecha de ida anterior a la actual(búsqueda-de-vuelos;seleccionar-una-fecha-de-ida-anterior-a-la-actual)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Seleccionar una fecha de ida anterior a la actual
+----------------------------------------------------------------------?[0m
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Seleccionar una fecha de vuelta anterior a la de ida(búsqueda-de-vuelos;seleccionar-una-fecha-de-vuelta-anterior-a-la-de-ida)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Seleccionar una fecha de vuelta anterior a la de ida
+----------------------------------------------------------------------?[0m
 </pre>
 </span>
 </div>
@@ -267,7 +330,7 @@ Destino no disponible
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.2</a> at 24/11/2024, 8:22:48 p. m.</p>
+<a href="http://www.gradle.org">Gradle 8.2</a> at 24/11/2024, 9:33:22 p. m.</p>
 </div>
 </div>
 </body>
