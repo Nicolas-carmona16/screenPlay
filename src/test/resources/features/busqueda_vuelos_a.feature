@@ -25,3 +25,9 @@ Feature: Búsqueda de vuelos
     And selecciono origen "Barranquilla" destino "Bogota" fecha ida "2025-01-01" y fecha vuelta "2025-01-10"
     When doy click en el boton buscar
     Then se obtienen los vuelos disponibles
+
+  Scenario: Búsqueda de vuelo no disponible
+    Given que estoy en la pagina de busqueda de vuelos
+    And selecciono origen "Barranquilla" destino "Bogota" fecha ida "2024-12-16" y fecha vuelta "2024-12-20"
+    When doy click en el boton buscar
+    Then se obtienen el mensaje "No hay vuelos disponibles para las fechas seleccionadas."

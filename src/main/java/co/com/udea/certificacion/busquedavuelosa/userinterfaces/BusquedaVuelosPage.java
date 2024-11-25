@@ -53,7 +53,7 @@ public class BusquedaVuelosPage extends PageObject {
 
     // VUELOS NO DISPONIBLES
     public static final Target MENSAJE_NO_VUELOS = the("mensaje de no hay vuelos disponibles")
-            .located(By.xpath("//div[contains(text(),'No hay vuelos disponibles para las fechas seleccionadas.')]"));
+            .locatedBy("//div[contains(text(),'No hay vuelos disponibles para las fechas seleccionadas.')]");
 
     // VUELO ENCONTRADO
     public static final Target VUELO_DISPONIBLE = the("div con la información básica del vuelo encontrado")

@@ -3,6 +3,7 @@ package co.com.udea.certificacion.busquedavuelosa.stepdefinitions;
 import co.com.udea.certificacion.busquedavuelosa.models.BusquedaDeVuelos;
 import co.com.udea.certificacion.busquedavuelosa.questions.ElCalendario;
 import co.com.udea.certificacion.busquedavuelosa.questions.ElDesplegable;
+import co.com.udea.certificacion.busquedavuelosa.questions.MensajeNoVuelos;
 import co.com.udea.certificacion.busquedavuelosa.questions.VuelosDisponibles;
 import co.com.udea.certificacion.busquedavuelosa.tasks.AbrirPagina;
 import co.com.udea.certificacion.busquedavuelosa.tasks.BuscarVuelos;
@@ -101,6 +102,13 @@ public class BusquedaVuelosStepDefinitions {
     public void seObtienenLosVuelosDisponibles() {
         usuario.should(
                 seeThat(VuelosDisponibles.sonVisibles(), is(true))
+        );
+    }
+
+    @Then("se obtienen el mensaje {string}")
+    public void seObtienenElMensaje(String mensajeEsperado) {
+        usuario.should(
+                seeThat(MensajeNoVuelos.esVisible(mensajeEsperado), is(true))
         );
     }
 }
